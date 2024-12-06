@@ -1,0 +1,79 @@
+% !TEX root = ../thesis-example.tex
+%
+\chapter{Analytical Solutions for Barrier Options}
+
+There are closed-form solutions for pricing European-style barrier options. This means we have an explicit mathematical expression that can be used to compute the value of a function without the need for numerical solutions. However, we will continue to compare closed-form solutions to more rigorous methodologies. Unlike their continuous counterparts, no closed-form solutions exist for discrete-time barrier options (even numerical pricing is a challenge). For this reason, we will only focus on continuous-time, single-barrier options.
+
+\section{The Black-Scholes Model}
+
+The Black and Scholes model was first published in 1973, named after the two economist who helped to develop it: Fischer Black and Myrion Scholes. (the model is formally known as the Black-Scholes-Merton model) A rigorous derivation of the Wiener process, Ito's lemma, the portfolio process at the risk-free rate gives us the following equation
+\begin{equation}\label{eq:BSM}
+	\frac{1}{2}\sigma^2S^2\frac{\partial^2 f}{\partial S^2}+rS\frac{\partial f}{\partial S}-\frac{\partial f}{\partial }-rf=0
+\end{equation}
+From here, we solve equation (\ref{eq:BSM}) to arrive at the following equation
+\begin{equation}\label{eq:bs_call_option}
+	f(S,t)=Se^{-qT}N(d_1)-Ke^{-rT}N(d_2)
+\end{equation}
+where $S$ is the stock price, $K$ is the strike price, $r$ is the risk-free rate, $T$ is the time to expiration, $\sigma$ is the volatility of the stock, $N(\cdot)$ is the cumulative distribution function, and $d_1/d_2$ are derived by the following:
+\begin{equation}
+	d_1=\frac{\ln\left(\sfrac{S_0}{K}\right)+\left(r+\sfrac{\sigma^2}{2}\right)T}{\sigma\sqrt{T}},\quad d_2=\frac{\ln\left(\sfrac{S_0}{K}\right)+\left(r-\sfrac{\sigma^2}{2}\right)T}{\sigma\sqrt{T}}=d_1-\sigma\sqrt{T}
+\end{equation}
+A more rigourous proof for the solution to the Black-Scholes PDE can be found on \ref{section:A1} of the appendix.
+\section{Black-Scholes Solution to Barrier Options}
+
+An essential concept in pricing barrier options is the in-out parity:
+\[
+	\text{Down-and-in call}+\text{ Down-and-out call}=\text{ Standard European Call}
+\]
+which we can use to derive the following relationship for a down-and-in call option$V_{\text{DIC}}$ as:
+\[
+	V_{\text{DIC}}(S,t)=V_{\text{Call}}(S,t)-V_{\text{DOC}}(S,t).
+\]
+We start by changing the value of $T$ for $\tau=T-t$. From there, in order to have the PDE solutioni for the down-and-out call option, we begin to alter equation (\ref{eq:bs_call_option}). Let $H$ be the barrier price. Then when $B\geq K$, we have:
+\begin{equation}\label{eq:DOC}
+	V_{\text{DOC}}(S,t)=Se^{-q\tau}\left(N(d_1)-\left(\frac{B}{S}\right)^{2\lambda}N(d^\prime_1)\right)-Ke^{-r\tau}\left(N(d_2)-\left(\frac{B}{S}\right)^{2\lambda-2} N(d^\prime_2)\right)
+\end{equation}
+where
+\begin{equation}
+	\lambda=\frac{r-q}{\sigma^2}+\frac{1}{2}
+\end{equation}
+and $d^\prime_1/d^\prime_2$ is derived by the following
+\begin{equation}
+	d^\prime_1=\frac{\ln\left(\frac{B^2}{SK}\right)+(r-q+\tfrac{1}{2}\sigma^2)\tau}{\sigma\sqrt{T}},\quad d^\prime_2=d^\prime_1-\sigma\sqrt{\tau}
+\end{equation}
+Subtracting equation (\ref{eq:DOC}) from equation (\ref{eq:bs_call_option}), we get the following:
+\begin{equation}
+	V_{\text{DIC}}(S,t)=Se^{-q\tau}\left(\frac{H}{S}\right)^{2\lambda}N(d^\prime_1)-Ke^{-r\tau}\left(\frac{H}{S}\right)^{2\lambda-2}N(d^\prime_2)
+\end{equation}
+\section{Barrier Option Payoffs}
+
+With eight different types of single barrier options comes eight possible payoffs, based on the barrier price. Table (\ref{tab:barrier_payoff}) shows the payoff based on whether the barrier is up or down, whether the stock price in or outside of the barrier, and whether the option type is a call or put. Refer to Appendix \ref{section:A2}
+
+\begin{table}[htbp!]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Down/Up & In/Out & Call/Put & Payoff ($K\leq B$) & Payoff ($K\geq B$)  \\
+		\hline
+		Down   & In     & Call      & $A_1-A_2+A_4+A_5$     & $A_3+A_5$   \\
+		 \hline
+		Up   & In     & Call      & $A_2-A_2+A_4+A_5$     & $A_1+A_5$   \\
+		 \hline
+		Down   & In     & Put    &  $A_1+A_5$  & $A_2-A_3+A_4+A_5$   \\
+		\hline
+		Up   & In     & Put    &  $A_3+A_5$  & $A_1-A_2+A_4+A_5$  \\
+		\hline		
+		Down   & Out     & Call    &  $A_2-A_4+A_6$  & $A_1-A_3+A_6$  \\
+		\hline
+		Up   & Out     & Call    &  $A_1-A_2+A_3-A_4+A_6$  & $A_6$  \\
+		\hline
+		Down   & Out     & Put    &  $A_6$  & $A_1-A_2+A_3-A_4+A_6$  \\
+		\hline
+		Up   & Out     & Put    &  $A_1-A_3+A_6$  & $A_2-A_4+A_6$  \\
+		\hline
+	\end{tabular}
+	\label{tab:barrier_payoff}
+	\caption{Theoretical Values of Single Barrier Options}
+\end{table}
+
+Throughout this report, we will be deriving our analysis from the down-and-out call, since it is easier to intutively understand.

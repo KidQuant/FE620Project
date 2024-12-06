@@ -1,0 +1,38 @@
+\begin{appendices}
+\chapter{Formulas and Proofs}
+\section{Black-Scholes PDE for Barrier Options}
+\label{section:A1}
+\newpage
+\section{Payoffs Formulas for Single Barrier Options}
+\label{section:A2}
+The formula for Single Barrier options have been proved by Reiner and Rubinstein. The payoff of a Single Barrier call or put depends on the following formulas:
+\[
+\begin{aligned}
+	A_1&=Se^{-q\tau}aN(ax_1)-Ke^{-r\tau}N(ax_1-a\sigma\sqrt{\tau})\\
+	A_2&=Se^{-q\tau}aN(ax_1)-Ke^{-r\tau}N(ax_2-a\sigma\sqrt{\tau})\\
+	A_3&=Se^{-q\tau}a\left(\tfrac{B}{S}\right)^{2\lambda+2}N(bx_3)-K\left(\tfrac{B}{S}\right)^{2\lambda}e^{-r\tau}N(bx_3-b\sigma\sqrt{\tau})\\
+	A_4&=Se^{-q\tau}a\left(\tfrac{B}{S}\right)^{2\lambda+2}N(bx_4)-K\left(\tfrac{B}{S}\right)^{2\lambda}e^{-r\tau}N(bx_4-b\sigma\sqrt{\tau})\\
+	A_5&=Ke^{-rT}\left[N(bx_2-b\sigma\sqrt{\tau})-\left(\tfrac{B}{S}\right)^{2\lambda}N\left(bx_4-b\sigma\sqrt{\tau}\right)\right]\\
+	A_6&=Ke^{-rT}\left[N(bx_5-b\sigma\sqrt{\tau})-\left(\tfrac{B}{S}\right)^{2\lambda}N\left(bx_5-b\sigma\sqrt{\tau}\right)\right]
+\end{aligned}
+\]
+with
+\[
+\begin{cases}
+	a=1,-1&\text{call or put}\\
+	b=1,-1&\text{out or in}
+\end{cases}
+\]
+where $x_1,x_2,x_3,x_4,x_5$ is the following:
+\[
+\begin{aligned}
+	&x_1=\frac{\ln\left(\frac{S}{K}\right)}{\sigma\sqrt{\tau}}+(1+\mu)\sigma\sqrt{\tau},\quad x_2=\frac{\ln\left(\frac{S}{B}\right)}{\sigma\sqrt{\tau}}+(1+\mu)\sigma\sqrt{\tau}\\
+	&x_3=\frac{\ln\left(\frac{B^2}{SK}\right)}{\sigma\sqrt{\tau}}+(1+\mu)\sigma\sqrt{\tau},\quad x_4=\frac{\ln\left(\frac{B}{S}\right)}{\sigma\sqrt{\tau}}+(1+\mu)\sigma\sqrt{\tau}\\
+	x_5=\frac{\ln\left(\frac{B}{S}\right)}{\sigma\sqrt{\tau}}+\lambda\sigma\sqrt{\tau}
+\end{aligned}
+\]
+where $\mu$ and $\lambda$ is the following
+\[
+\mu=\frac{r-q-\tfrac{\sigma^2}{2}}{\sigma^2},\quad\lambda=\sqrt{\mu^2+\frac{2q}{\sigma^2}}
+\]
+\end{appendices}

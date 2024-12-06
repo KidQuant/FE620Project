@@ -1,0 +1,28 @@
+\chapter{Barrier Option Pricing with Monte Carlo}
+
+\begin{table}[!h]
+	\centering
+    \begin{tabular}{p{0.5cm}|p|p|p|p|p| p}\toprule
+        & \multicolumn{1}{m{1.5cm}}{\centering MC_{100}}
+		& \multicolumn{1}{m{1.5cm}}{\centering Put Price}
+		& \multicolumn{1}{m{1.5cm}}{\centering Call Payoff}
+		& \multicolumn{1}{m{1.5cm}}{\centering Put Payoff}
+		& \multicolumn{1}{m{1.5cm}}{\centering $c+e^{-rT}K$}
+		& \multicolumn{1}{m{1.5cm}}{\centering $p+S_0$}\\
+		\midrule
+		$S_0=100, B=95$  & 4.64 & 1.72 &	2.79 & 0 & 576.79 &	576.79 \\
+        \hline
+		575 & 3.96 & 2.03 &	1.79 & 0 & 576.79 &	576.79 \\
+        \hline
+		576 & 3.29 & 2.41 & 0.79 & 0 & 576.79 &	576.79 \\
+		577 & 2.74 & 2.84 &	0 & 0.21 & 577 & 577 \\
+		578 & 2.2 &	3.29 & 0 & 1.21 & 578 &	578 \\
+		579 & 1.73 & 3.88 &	0 &	2.21 & 579 & 579 \\
+		580 & 1.31 & 4.47 &	0 &	3.21 & 580 & 580 \\
+		581 & 0.98 & 5.09 &	0 &	4.21 & 581 & 581 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Put-Call parity derived from Oct 9, 2024 SPY prices}
+	\label{table:1} 
+\end{table}
+

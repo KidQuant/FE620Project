@@ -1,0 +1,64 @@
+\documentclass[16pt]{article}
+\title{Comparing Methodologies for Pricing Barrier Options}
+\author{Andre Sealy, Amod Lamichhane, Jeffrey Gebauer}
+\usepackage{amsmath, amsfonts, amssymb, amsthm,}
+\usepackage{braket}
+\usepackage{bbold}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\newcommand{\lam}{$\lambda$}
+\usepackage{pgfplots}
+\tikzset{My Style/.style={samples=100, thick}}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{listings}
+\usepackage[official]{eurosym}
+\usepackage[shortlabels]{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
+\begin{document}
+\onehalfspacing 
+\maketitle
+\subsection*{Derivatives Chosen}
+
+We have decided to study Barrier options on the S\&P index (SPY).
+
+\subsection*{Valuation Algorithm}
+
+Our primary valuation algorithm will involve utilizing Monte Carlo Simulation and Binomial Tree, which will be compared with a closed-form analytical solution to a Barrier Option.
+
+\subsection*{Data Collection}
+
+Barrier Options are path-dependent exotic options, so we cannot collect data for these options in the same way we can collect vanilla options such as European and American style options. Instead, our analysis will involve comparing fictitious form of options while comparing different approaches to valuation. We may use live price data from the SPY ETF as a starting point for our simulations. 
+\newline
+\newline
+However, there is a work-around that we can employ for this issue. Since American options are highly liquid and tradable, and since there is an exercise boundary for American options, we can price an American option as an knocked-and-exercise barrier options.
+\subsection*{Data Analysis}
+We will evaluate the differences between the three approaches based on time complexity of the calculations, the confidence interval in the final price of the instrument, and the level of difficulty of implementation.
+\subsection*{Detailed Explanation}
+For this project, we will evaluate the different methods for pricing barrier options. These three approaches will include:
+\begin{itemize}
+	\item Analytical formulations, which will serve as our benchmark for evaluation
+	\item Monte Carlo simulation
+	\item Binomial Tree Paths
+\end{itemize}
+Other approaches may include
+\begin{itemize}
+	\item Finite Differences
+	\item Reflection Principle
+\end{itemize}
+By comparing the different pricing methods, we also allow our team to work congruently instead of linearly, given the dependencies on model development, implementation, and testing. Each of these pricing methods has its benefits and detriments, and we aim to accurately describe these differences and determine when one might use each of the given approaches.
+\end{document}

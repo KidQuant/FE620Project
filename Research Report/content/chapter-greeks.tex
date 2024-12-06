@@ -1,0 +1,38 @@
+\chapter{The Greeks for Barrier Options}
+\label{sec:greeks}
+
+The Greeks are key sensitivities in option pricing that measure how the price of an option changes with respect to various factors such as the underlying asset price, time to maturity, volatility, and interest rates. For barrier options, the calculation of the Greeks is more complex due to the added condition of a barrier, which affects the option's price path and behavior. This chapter provides an explanation of how to calculate the Greeks for barrier options.
+
+\section*{1. Delta (\(\Delta\))}
+
+Delta for a barrier option measures the sensitivity of the option price to changes in the underlying asset price. It represents the rate of change of the option price with respect to small changes in the asset price. 
+
+For a \textbf{knock-in} barrier option, delta is calculated similarly to standard options, but with the added complexity of the barrier. The delta reflects how changes in the underlying price affect the probability of hitting the barrier level and, thus, the likelihood of the option becoming active.
+
+For \textbf{knock-out} options, delta will approach zero as the underlying asset approaches the barrier level, since the probability of the option being knocked out increases, making the option's price less sensitive to further changes in the underlying asset price.
+
+\section*{2. Gamma (\(\Gamma\))}
+
+Gamma for barrier options measures the rate of change of delta with respect to changes in the underlying asset price. It is the second derivative of the option price with respect to the asset price. 
+
+Gamma for barrier options can be derived from the standard Black-Scholes model, but with an adjustment for the probability of barrier activation. The higher the volatility, the larger the gamma for barrier options, especially near the barrier level.
+
+For \textbf{knock-in} options, gamma is typically larger as the option approaches the barrier level, as it is more sensitive to changes in the underlying asset price.
+
+\section*{3. Vega (\(\nu\))}
+
+Vega for barrier options reflects the sensitivity of the option price to changes in volatility. The formula for vega is similar to the standard Black-Scholes model but adjusted for the likelihood of hitting the barrier level. 
+
+For \textbf{knock-in} options, increased volatility tends to increase the likelihood of hitting the barrier, thus increasing the option price, and therefore vega will be positive. For \textbf{knock-out} options, increased volatility increases the chance of the option being knocked out, reducing the option price. Hence, vega for knock-out options will generally be negative.
+
+\section*{4. Theta (\(\Theta\))}
+
+Theta for barrier options measures the rate of change of the option's price as time to maturity decreases. Barrier options are path-dependent, and their theta is influenced by the time remaining until the option either knocks in, knocks out, or expires. The closer the option is to the barrier, the more sensitive the theta becomes.
+
+For \textbf{knock-in} options, as time to maturity decreases, the value of the option tends to decrease, particularly when the underlying asset price is far from the barrier. For \textbf{knock-out} options, time decay may have a more pronounced effect, especially if the underlying price is near the barrier.
+
+\section*{5. Rho (\(\rho\))}
+
+Rho for barrier options measures the sensitivity of the option price to changes in interest rates. It represents how much the option price changes when the risk-free interest rate changes by 1\%.
+
+For \textbf{knock-in} options, an increase in interest rates generally increases the option price, since higher rates make holding the option more attractive relative to other assets. For \textbf{knock-out} options, the effect of interest rate changes may be less pronounced, especially if the option is likely to be knocked out before maturity.

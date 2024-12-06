@@ -1,0 +1,72 @@
+% !TEX root = ../thesis-example.tex
+%
+\chapter{Barrier Options}
+
+\captionsetup[figure]{font=large}
+
+For some background, we will briefly discuss the attributes of a vanilla option. A call option gives the holder the right, but not the obligation, to buy a particular number of the underlying assets in the future for a pre-agreed price known as the strike price (put options give the holder the right, but not the obligation, to sell). While European options can only be exercised on the expiration date, American options allow the holder to exercise at any time on or before the expiration date. We will focus on European options throughout this research report.
+
+Let $S$ be the price of an underlying asset and $K$ be the strike price, where $S,K\in\amsbb{R}^+$. Then the payoff for a vanilla call option,$V_c$, is given by the following
+\begin{equation}
+	V_c(S,T)=\begin{cases}
+		S_T-K  & \text{if }S_t>K,\forall t\in[0,T) \\
+		0 & \text{otherwise}
+	\end{cases}
+\end{equation}
+Likewise, the payoff for a vanilla put option, $V_p$, derived by the following:
+\begin{equation}
+	V_p(S,T)=\begin{cases}
+		0 & \text{if }S_t>K,\forall t\in[0,T) \\
+		K-S_T  & \text{otherwise}
+	\end{cases}
+\end{equation}
+These formulas drive our intuition of how both vanilla and exotic options can be priced.
+
+As we can see, the payoff of a vanilla option depends only on the terminal value of the underlying asset. However, an exotic option, such as a barrier option, is very different. Its price is determined by whether the underlying asset's price reaches a certain level during a specific period. Barrier options differ from standard vanilla options in several ways. 
+
+First, they match the hedging needs more closely than standard options; second, premiums for barrier options are typically lower than vanilla options; and finally, the payoff of a barrier option matches beliefs about the future behavior of the market. These features benefit many different types of investors, regardless of experience or financial needs.
+
+Another significant difference between barrier options and vanilla options is that barrier options are path-dependent. This means that the payoff depends on the process of the underlying asset. Another difference involves the possibility of a rebate. A rebate is a positive discount that a barrier option holder may receive if the barrier is never reached. For the purpose of outlining the analytical framework, we will not discuss rebates.
+
+There are four different types of thresholds, or barriers, to consider which are:
+
+\begin{itemize}
+	\item down-and-out
+	\item up-and-out
+	\item down-and-in
+	\item up-and-in
+\end{itemize}
+
+Combined with calls and puts, we have 8 different types of barrier options in total. The payoff for a barrier option is either "knocked out" or "knocked in" if the price of the underlying crosses the barrier. 
+
+For example, let $B$ be the barrier threshold and $S_0$ be the price of the underlying asset at time $t=0$. Then, for any $K$ the down-and-out call option with constant barrier $B<S_0$ has a payoff if the underlying prices stays below the barrier value until maturity $T$:
+\begin{equation}
+	\begin{cases}
+	\left(S_T-K\right)^+  & \text{if }S_t>B,\forall t\in[0,T) \\
+	0 & \text{otherwise}
+	\end{cases}
+\end{equation}
+An up-and-out call option with constant barrier $B<S_0$ has a payoff if the underlying price does not go beyond the barrier value until maturity $T$:
+\begin{equation}
+	\begin{cases}
+		\left(S_T-K\right)^+  & \text{if }S_t<B,\forall t\in[0,T) \\
+		0 & \text{otherwise}
+	\end{cases}
+\end{equation}
+A down-and-in call call option with a constant barrier $B<S_0$ has a payoff if the underlying prices stays below the barrier value until maturity $T$:
+\begin{equation}
+	\begin{cases}
+		0 & \text{if }S_t>B,\forall t\in[0,T) \\
+		\left(S_T-K\right)^+ & \text{otherwise}
+	\end{cases}
+\end{equation}
+An up-and-in call option with a constant barrier $B<S_0$ has a payoff if the underlying prices stays beyond the barrier value until maturity $T$:
+\begin{equation}
+	\begin{cases}
+		0 & \text{if }S_t<B,\forall t\in[0,T) \\
+		\left(S_T-K\right)^+ & \text{otherwise}
+	\end{cases}
+\end{equation}
+There are two main approaches to analytically evaluating the price of a barrier option: the probability method and the partial differential equation (PDE) method. The probability method involves the use of the reflection principal and the Girsanov theorem to estimate the barrier densities. The PDE approach is derived from the institution that all barrier options satisfy the Black-Scholes PDE but with different domains, expiry conditions, and boundary conditions.
+
+Merton was the first to price barrier options using the PDE method, which he used to obtain the theoretical price of a down-and-out call option by using the PDE method to obtain a theoretical price. We will demonstrate this in the next section.

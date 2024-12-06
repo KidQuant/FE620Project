@@ -1,0 +1,120 @@
+
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+
+\documentclass[
+10pt,						% font size
+paper=A4,					% paper size --> A4 is default in Germany
+twoside=true,				% onesite or twoside printing
+openright,					% doublepage cleaning ends up right side
+chapterprefix=true,			% prefix for chapter marks
+headings=normal,			% size of headings
+%bibliography=totoc,			% include bib in toc
+%listof=totoc,				% include listof entries in toc
+titlepage=on,				% own page for each title page
+captions=tableabove,		% display table captions above the float env
+draft=false,				% value for draft version
+]{report}
+\author{Andre Sealy}
+\usepackage{amsmath, amsfonts, amssymb, amsthm,}
+\usepackage{tikz}
+\usetikzlibrary{matrix,positioning}
+\tikzset{bullet/.style={circle,fill,inner sep=2pt}}
+\usepackage{braket}
+\usepackage{bbold}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{xcolor}
+\newcommand{\lam}{$\lambda$}
+\usepackage{pgfplots}
+\tikzset{My Style/.style={samples=100, thick}}
+\usepackage{graphicx}
+\usepackage{bbold}
+\usepackage{pgfplots}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{listings}
+\usepackage[official]{eurosym}
+\usepackage[shortlabels]{enumitem}
+\usepackage{booktabs}
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+\usepackage{xcolor}
+\usepackage{appendix}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+\makeatletter
+\def\amsbb{\use@mathgroup \M@U \symAMSb}
+\makeatother
+
+\onehalfspacing
+
+\begin{document}
+	
+	% --------------------------
+	% rename document parts
+	% --------------------------
+	
+
+	% --------------------------
+	% Front matter
+	% --------------------------
+	\pagestyle{empty}				% no header or footers
+	\input{content/titlepages}		% INCLUDE: all titlepages
+	\cleardoublepage
+	\tableofcontents
+	\cleardoublepage
+	% --------------------------
+	% Body matter
+	% --------------------------+
+	\input{content/chapter-introduction} % INCLUDE: introduction
+	\input{content/chapter-barrieroptions} %INCLUDE: methodology
+	\cleardoublepage
+	\input{content/chapter-analytical}
+	\cleardoublepage
+    \input{content/chapter-montecarlo.tex}
+    \cleardoublepage
+    \input{content/chapter-binom.tex}
+    \cleardoublepage
+    \input{content/chapter-hedging.tex}
+	\input{content/chapter-greeks.tex}
+	\cleardoublepage
+	\input{content/bibliography.tex}
+	\cleardoublepage
+	\input{content/appendix.tex}
+
+	
+	% --------------------------
+	% Back matter
+	% --------------------------
+	%{%
+		%	\setstretch{1.1}
+		%	\renewcommand{\bibfont}{\normalfont\small}
+		%	\setlength{\biblabelsep}{0pt}
+		%	\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+		%	\printbibliography[nottype=online]
+		%	\printbibliography[heading=subbibliography,title={Webseiten},type=online,prefixnumbers={@}]
+		%}
+	
+%	\listoffigures
+	
+%	\listoftables
+%	\cleardoublepage
+
+
+	
+	
+	
+	% **************************************************
+	% End of Document CONTENT
+	% **************************************************
+\end{document}
