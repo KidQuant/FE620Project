@@ -93,11 +93,11 @@ For the given parameters:
 Figure \ref{fig:binomial-tree} illustrates the binomial tree for the given parameters, showing the possible stock price movements and the resulting option values at each node. The calculated option price, considering the up-and-in barrier condition, is obtained through backward induction along the tree. This ensures that the barrier condition is applied at each step. The final option price is 16.42.
 
 
-%\begin{figure}[h]
-%    \centering
-%    \includegraphics[width=.75\linewidth]{content/images/three-step.png}
-%    \caption{Binomial Tree with Barrier Level \(B = 90\) and Strike Price \(K = 105\).}
-%    \label{fig:binomial-tree}
-%\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.75\linewidth]{content/images/three-step.jpg}
+    \caption{Binomial Tree with Barrier Level \(B = 90\) and Strike Price \(K = 105\).}
+    \label{fig:binomial-tree}
+\end{figure}
 
 The binomial tree method provides a flexible and intuitive framework for pricing options, including barrier options. However, as shown in this example, its computational requirements grow significantly with the number of steps \(N\), making it less efficient for path-dependent options. Alternative methods, such as Monte Carlo simulations or analytical solutions, may be more suitable for pricing complex derivatives.

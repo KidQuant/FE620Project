@@ -1,19 +1,36 @@
 \chapter{Barrier Option Pricing with Monte Carlo}
+Suppose the asset price follows a Geometric Brownian Motion (GBM):
+\begin{equation}\label{eq:GBM}
+	dS_t=rS_tdt+\sigma S_tdW_t
+\end{equation}
+Where $S_t$ is the asset price at time $t$, $r$ is the risk-free interest rate, $\sigma$ is the volatility of the asset, and $dW_t$ is the increment of a Wiener process. With this process in mind, we can discretize time by dividing the total time into smaller length intervals $\Delta t=T/N.$ Afterwards, we simulate the asset price paths by generating a random standard normal variable $Z$ and using the random variable to update the asset price with the discretized GBM.
 
 \begin{center}
+	\begin{table}[H]
     \begin{tabular}{ | m{4em} | m{1.3cm}| m{1.3cm} | m{1.3cm}| m{1.3cm} | m{1.3cm} | m{1.3cm} | m{1.3cm} | m{1.35cm} | m{1.3cm} |} 
   \hline
    & Price & $\text{MC}_{100}$ & $\text{err}_{100}$ & $\text{MC}_{1000}$ & $\text{err}_{1000}$ & $\text{MC}_{5000}$ & $\text{err}_{5000}$ & $\text{MC}_{10000}$ & $\text{err}_{10000}$  \\ 
+   \hline
+   $S_0=100$ $B=0.01$ &11.1605&10.4632&0.6973&11.4493&-0.2888&10.8657&0.2948&11.1015&0.0590\\
   \hline
-  $S_0=100$ $B=95$ & 5.05 &  & & & & & & &\\ 
+  $S_0=100$ $B=95$ & 5.05 & 6.5795 & -1.5295 & 5.8379  & -0.7870 & 5.2264 & -0.1764 & 5.5198 & -0.4698\\ 
   \hline
-  $S_0=100$ $B=90$ & 8.5462 &  & & & & & & &\\ 
+  $S_0=100$ $B=90$ & 8.5462 & 10.63  & -2.0838 & 9.2705 & -0.7243 & 9.0406 & -0.4944 & 8.9585  & -0.4123\\ 
+  \hline 
+  $S_0=110$ $B=100$ &11.6763&12.9766&-1.3003&12.5033&-0.8270&12.1231&-0.4468&12.5707&-0.8944 \\
   \hline
-  $S_0=120$ $B=110$ & 17.6635 &  &  & & & & & &\\ 
+  $S_0=110$ $B=90$ &17.7117&15.8569&1.8548&18.5671&-0.8554&18.0540&-0.3423&18.0546&-0.3429\\
   \hline
-  $S_0=120$ $B=100$ & 23.4640 &  & & & & & & &\\ 
+   $S_0=120$ $B=100$ & 23.4640 & 20.5357  & 2.9283 & 24.9569  & -1.4930 & 24.6213 & -1.1573 & 23.8197 & -0.3557 \\ 
   \hline
-  $S_0=120$ $B=110$ & 13.2648 &  & & & & & & &\\ 
+  $S_0=120$ $B=110$ & 13.2648 & 18.0740 & -4.8092 & 15.6643 & -2.3995 & 15.3539 & -2.0991 & 15.1735 & -1.9087\\ 
   \hline
 \end{tabular}
+\caption{MC Down-and-out call with $q=8\%,r=5\%, T=0.5,\sigma=25\%,K=90$}
+\label{tab:MC_barrer}
+\end{table}
 \end{center}
+\begin{equation}
+	S_{t+\Delta t}=S_t\times\exp\left(\left(r-\frac{\sigma^2}{2}\right)\Delta t+\sigma\sqrt{\Delta t}\times 2\right)
+\end{equation}
+Table (\ref{tab:MC_barrer}) shows the comparison between the Black-Scholes analytical price and the Monte Carlo simulations for the down-and-out call options. We have chosen options with different Barrier values as well as varying stock values. We've used simulations for $n=100,1000,5000,\text{ and }10000$ and samples.
