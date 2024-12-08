@@ -1,11 +1,14 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Barrier Options}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Analytical Solutions for Barrier Options}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}The Black-Scholes Model}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Black-Scholes Solution to Barrier Options}{6}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Barrier Option Payoffs}{6}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Barrier Option Pricing with Monte Carlo}{7}{chapter.4}%
-\contentsline {chapter}{\numberline {5}The Greeks for Barrier Options}{9}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Formulas and Proofs}{12}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Black-Scholes PDE for Barrier Options}{12}{section.1.A.1}%
-\contentsline {section}{\numberline {A.2}Payoffs Formulas for Single Barrier Options}{13}{section.1.A.2}%
+\contentsline {chapter}{\numberline {1}Barrier Options}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Options Payoffs}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Barrier Option Payoffs}{3}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Analytical Solutions for Barrier Options}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Black-Scholes Model}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Black-Scholes Solution to Barrier Options}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Barrier Option Payoffs}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Surface of the Barrier Option}{7}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Barrier Option Pricing with Monte Carlo}{8}{chapter.3}%
+\contentsline {chapter}{\numberline {4}The Greeks for Barrier Options}{10}{chapter.4}%
+\contentsline {chapter}{\numberline {A}Formulas and Proofs}{13}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Black-Scholes PDE for Barrier Options}{13}{section.1.A.1}%
+\contentsline {section}{\numberline {A.2}Payoffs Formulas for Single Barrier Options}{14}{section.1.A.2}%

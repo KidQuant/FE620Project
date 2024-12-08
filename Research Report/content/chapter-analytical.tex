@@ -23,15 +23,15 @@ A more rigourous proof for the solution to the Black-Scholes PDE can be found on
 
 An essential concept in pricing barrier options is the in-out parity:
 \[
-	\text{Down-and-in call}+\text{ Down-and-out call}=\text{ Standard European Call}
+	C_{\text{vanilla}}=C_{\text{up-in}}+C_{\text{up-out}}
 \]
-which we can use to derive the following relationship for a down-and-in call option$V_{\text{DIC}}$ as:
+which we can use to derive the following relationship for a up-and-in call option$V_{\text{DIC}}$ as:
 \[
-	V_{\text{DIC}}(S,t)=V_{\text{Call}}(S,t)-V_{\text{DOC}}(S,t).
+	C_{\text{up-out}}=C_{\text{vanilla}}-C_{\text{up-in}}
 \]
-We start by changing the value of $T$ for $\tau=T-t$. From there, in order to have the PDE solutioni for the down-and-out call option, we begin to alter equation (\ref{eq:bs_call_option}). Let $H$ be the barrier price. Then when $B\geq K$, we have:
+We start by changing the value of $T$ for $\tau=T-t$. From there, in order to have the PDE solutioni for the up-and-out call option, we begin to alter equation (\ref{eq:bs_call_option}). Let $H$ be the barrier price. Then when $B\geq K$, we have:
 \begin{equation}\label{eq:DOC}
-	V_{\text{DOC}}(S,t)=Se^{-q\tau}\left(N(d_1)-\left(\frac{B}{S}\right)^{2\lambda}N(d^\prime_1)\right)-Ke^{-r\tau}\left(N(d_2)-\left(\frac{B}{S}\right)^{2\lambda-2} N(d^\prime_2)\right)
+	C_{\text{up-out}}(S,t)=Se^{-q\tau}\left(N(d_1)-\left(\frac{B}{S}\right)^{2\lambda}N(d^\prime_1)\right)-Ke^{-r\tau}\left(N(d_2)-\left(\frac{B}{S}\right)^{2\lambda-2} N(d^\prime_2)\right)
 \end{equation}
 where
 \begin{equation}
@@ -41,10 +41,8 @@ and $d^\prime_1/d^\prime_2$ is derived by the following
 \begin{equation}
 	d^\prime_1=\frac{\ln\left(\frac{B^2}{SK}\right)+(r-q+\tfrac{1}{2}\sigma^2)\tau}{\sigma\sqrt{T}},\quad d^\prime_2=d^\prime_1-\sigma\sqrt{\tau}
 \end{equation}
-Subtracting equation (\ref{eq:DOC}) from equation (\ref{eq:bs_call_option}), we get the following:
-\begin{equation}
-	V_{\text{DIC}}(S,t)=Se^{-q\tau}\left(\frac{H}{S}\right)^{2\lambda}N(d^\prime_1)-Ke^{-r\tau}\left(\frac{H}{S}\right)^{2\lambda-2}N(d^\prime_2)
-\end{equation}
+If $S\geq B$ at any time before expiration, the up-and-out call ceases to exist (it is knocked out). If $S<B$ for the entire option's life, the payoff at maturity is just like a standard call, where the payoff is $\max\left(S_T-K, 0\right)$
+
 \section{Barrier Option Payoffs}
 
 With eight different types of single barrier options comes eight possible payoffs, based on the barrier price. Table (\ref{tab:barrier_payoff}) shows the payoff based on whether the barrier is up or down, whether the stock price in or outside of the barrier, and whether the option type is a call or put. Refer to Appendix \ref{section:A2}
@@ -75,4 +73,17 @@ With eight different types of single barrier options comes eight possible payoff
 	\label{tab:barrier_payoff}
 	\caption{Theoretical Values of Single Barrier Options}
 \end{table}
-Throughout this report, we will be deriving our analysis from the down-and-out call, since it is easier to intutively understand.
+Throughout this report, we will be deriving our analysis from the up-and-out call and put option, since it is easier to intuitively understand. The payoffs from equations (\ref{eq:vanilla_call}) and (\ref{eq:vanilla_put}), still hold for vanilla calls and puts. However, recall for a knocked-out up option, the option losses value once it has reaches the barrier above the underlying stock price.
+
+\section{Surface of the Barrier Option}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.90\linewidth]{content/images/surface.png}
+	\caption{At-the-money up-and-out barrier option}
+	\label{fig:surface}
+\end{figure}
+
+Figure (\ref{fig:surface}) shows the barrier curve and surface for an at-the-money up-and-out barrier option for $S=100,K=100, T=1, r=10\%,\sigma=20\%, \text{ and }B=120$. The curve assumes the option is close to or at expiration date. As we can see, the option has no value at any price below 100, as the strike price is also 100. However, the call will retain some value, as the option has not reached the barrier of 120. Where the payoff line (blue) and the barrier curve (red) intersects shows the potential payoff at expiration, which is 1.18 according to Black-Scholes.
+
+The surface shows the option value in relation to time and the underlying price. As we can see, the barrier option has the most value when the option is very close to expiration and the stock price is relatively close to the barrier. Otherwise, the option has no value when the underlying is at 40 and the time to expiration is 0. The option also loses it's value when the option is close to the barrier.

@@ -1,13 +1,16 @@
 % !TEX root = ../thesis-example.tex
 %
 \chapter{Barrier Options}
+\section{Background}
+Barrier options are path-dependent options with price barriers; their price depends on whether the underlying asset's price reaches a certain level during a specific period. Various types of barrier options regularly trade over-the-counter and have done so since 1967 \cite{JohnRubinstein1985}. These exotic options were developed to address the specific hedging concerns and market conditions that European and American options failed to accommodate. Barrier options are very popular for their risk-management solutions, as they allow investors and institutions to take various positions with very specific levels of protection.
 
-\captionsetup[figure]{font=large}
+As financial markets continued to evolve in the 1990s, barrier options became more standardized and accessible to the financial population. Derivative exchanges and financial institutions offered barrier options on various underlying assets, such as commodities, currencies, and interest rates. The 2008 global financial crisis sparked a renewed interest in derivative products for their risk-management capabilities, and barrier options remained one of the best products for their ability to tailor risk profiles to specific market conditions. In addition, computational tool advancements make pricing these options more manageable, thereby increasing the accessibility to market participants. This report will outline the many analytical and computational tools for pricing barrier options.
 
+\section{Options Payoffs}
 For some background, we will briefly discuss the attributes of a vanilla option. A call option gives the holder the right, but not the obligation, to buy a particular number of the underlying assets in the future for a pre-agreed price known as the strike price (put options give the holder the right, but not the obligation, to sell). While European options can only be exercised on the expiration date, American options allow the holder to exercise at any time on or before the expiration date. We will focus on European options throughout this research report.
 
 Let $S$ be the price of an underlying asset and $K$ be the strike price, where $S,K\in\amsbb{R}^+$. Then the payoff for a vanilla call option,$V_c$, is given by the following
-\begin{equation}
+\begin{equation}\label{eq:vanilla_call}
 	V_c(S,T)=\begin{cases}
 		S_T-K  & \text{if }S_t>K,\forall t\in[0,T) \\
 		0 & \text{otherwise}
@@ -15,13 +18,13 @@ Let $S$ be the price of an underlying asset and $K$ be the strike price, where $
 \end{equation}
 Likewise, the payoff for a vanilla put option, $V_p$, derived by the following:
 \begin{equation}
-	V_p(S,T)=\begin{cases}
+	V_p(S,T)=\begin{cases}\label{eq:vanilla_put}
 		0 & \text{if }S_t>K,\forall t\in[0,T) \\
 		K-S_T  & \text{otherwise}
 	\end{cases}
 \end{equation}
 These formulas drive our intuition of how both vanilla and exotic options can be priced.
-
+\section{Barrier Option Payoffs}
 As we can see, the payoff of a vanilla option depends only on the terminal value of the underlying asset. However, an exotic option, such as a barrier option, is very different. Its price is determined by whether the underlying asset's price reaches a certain level during a specific period. Barrier options differ from standard vanilla options in several ways. 
 
 First, they match the hedging needs more closely than standard options; second, premiums for barrier options are typically lower than vanilla options; and finally, the payoff of a barrier option matches beliefs about the future behavior of the market. These features benefit many different types of investors, regardless of experience or financial needs.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  7 DEC 2024 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  8 DEC 2024 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,7 +1073,7 @@ Package hyperref Info: Link coloring ON on input line 61.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (content/titlepages.tex
-<images (2).png, id=50, 651.44789pt x 488.58592pt>
+<images (2).png, id=62, 651.44789pt x 488.58592pt>
 File: images (2).png Graphic file (type png)
 <use images (2).png>
 Package pdftex.def Info: images (2).png  used on input line 8.
@@ -1082,12 +1082,12 @@ Package pdftex.def Info: images (2).png  used on input line 8.
 
 {C:/Users/drebi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images (2)
 .png>]) (Project.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (C:\Users\drebi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (C:\Users\drebi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1104,61 +1104,299 @@ l.75 	\cleardoublepage
                        [1
 
 
-] (content/chapter-introduction.tex
+] (content/chapter-barrieroptions.tex
 Chapter 1.
-) (content/chapter-barrieroptions.tex [2
+[2
 
 
-]
+] [3]) (content/chapter-analytical.tex [4]
 Chapter 2.
-[3
-
-]) [4] (content/chapter-analytical.tex
-Chapter 3.
 [5
 
+]
+<content/images/surface.png, id=132, 1018.2843pt x 395.3169pt>
+File: content/images/surface.png Graphic file (type png)
+<use content/images/surface.png>
+Package pdftex.def Info: content/images/surface.png  used on input line 82.
+(pdftex.def)             Requested size: 422.77664pt x 164.12582pt.
+ [6]) (content/chapter-montecarlo.tex [7 <./content/images/surface.png>]
+Chapter 3.
 
-]) [6] (content/chapter-montecarlo.tex
-Chapter 4.
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 1.2925
+ []
 
-Overfull \hbox (28.96567pt too wide) in paragraph at lines 10--29
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 1.8113
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 -0.5188
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 1.4851
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 -0.1926
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 1.3249
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 -0.0324
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/10 1.3525
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+[]|\OT1/cmr/m/n/10 -0.06
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 2.9799
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 3.2746
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 -0.2947
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 3.0758
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 -0.0960
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 3.0351
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 -0.0552
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 2.9991
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[]|\OT1/cmr/m/n/10 -0.0192
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\OT1/cmr/m/n/10 1.1789
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\OT1/cmr/m/n/10 1.5790
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\OT1/cmr/m/n/10 -0.4001
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\OT1/cmr/m/n/10 1.0808
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\OT1/cmr/m/n/10 1.2127
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\OT1/cmr/m/n/10 -0.0338
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\OT1/cmr/m/n/10 1.2060
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\OT1/cmr/m/n/10 3.5369
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\OT1/cmr/m/n/10 4.6782
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\OT1/cmr/m/n/10 -1.1413
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\OT1/cmr/m/n/10 3.2785
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\OT1/cmr/m/n/10 3.4410
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\OT1/cmr/m/n/10 3.5303
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 0.6264
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 0.7961
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 -0.1697
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 0.7819
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 -0.1555
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 0.6422
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 -0.0159
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\OT1/cmr/m/n/10 0.6551
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+[]|\OT1/cmr/m/n/10 -0.0362
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 2.9014
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 2.4881
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 0.4133
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 3.1815
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 -0.2801
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 2.9130
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 -0.0116
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\OT1/cmr/m/n/10 2.9700
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[]|\OT1/cmr/m/n/10 -0.0686
+ []
+
+
+Overfull \hbox (53.71727pt too wide) in paragraph at lines 10--29
  [][] 
  []
 
-[7
+[8
 
+]) (content/chapter-hedging.tex) (content/chapter-greeks.tex [9]
+Chapter 4.
+[10
 
-]) [8] (content/chapter-hedging.tex) (content/chapter-greeks.tex
-Chapter 5.
-[9
-
-
-]) [10] (content/bibliography.tex) [11
-
+]) (content/bibliography.tex [11]) [12
 
 ] (content/appendix.tex
 Appendix A.
-[12
+[13
 
 
-])
-
-Package caption Warning: Unused \captionsetup[figure] on input line 7.
-See the caption package documentation for explanation.
-
-[13] (Project.aux)
+]) [14] (Project.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.25pt have occurred.
 
 Package rerunfilecheck Info: File `Project.out' has not changed.
-(rerunfilecheck)             Checksum: 5F968B2D9D09A4D276C7F30156E522CE;2247.
+(rerunfilecheck)             Checksum: 8E3B801D259FCE0B01C967079643B75D;2764.
  ) 
 Here is how much of TeX's memory you used:
- 35337 strings out of 476326
- 819469 string characters out of 5787722
- 1872660 words of memory out of 5000000
- 55140 multiletter control sequences out of 15000+600000
+ 35351 strings out of 476326
+ 819585 string characters out of 5787722
+ 1875660 words of memory out of 5000000
+ 55151 multiletter control sequences out of 15000+600000
  522169 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,104p,889b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1178,9 +1416,9 @@ cm/cmr7.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Project.pdf (14 pages, 222262 bytes).
+Output written on Project.pdf (15 pages, 381581 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 135 words of extra memory for PDF output out of 10000 (max. 10000000)
 
