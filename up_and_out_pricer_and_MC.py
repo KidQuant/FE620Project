@@ -9,7 +9,7 @@ from scipy import sparse
 from scipy.sparse.linalg import splu
 from scipy.sparse.linalg import spsolve
 
-S0 = 110.0  # spot stock price
+S0 = 100.0  # spot stock price
 X0 = np.log(S0)
 K = 100.0  # strike
 T = 1.0  # maturity
@@ -94,7 +94,7 @@ ax2 = fig.add_subplot(122, projection="3d")
 ax1.plot(S, Payoff, color="blue", label="Payoff")
 ax1.plot(S, V[:, 0], color="red", label="Barrier curve")
 ax1.set_xlim(40, 130)
-ax1.set_ylim(0, 1.5)
+ax1.set_ylim(0, 1.9)
 ax1.set_xlabel("S")
 ax1.set_ylabel("V")
 ax1.legend(loc="upper right")
