@@ -1,15 +1,15 @@
 \chapter{Binomial Tree Method}
 \label{sec:binomial-tree}
 
-The \textit{binomial tree method} is a widely used approach to price derivative instruments, including barrier options. The method approximates the price evolution of the underlying asset by discretizing time into a finite number of steps, \(N\), between the current time, \(t = 0\), and the maturity, \(T\). The accuracy of the method improves as the number of steps increases, with the binomial tree price converging to the theoretical option price.
+The \textit{binomial tree method} is a useful approach for pricing derivative instruments, including barrier options. It works by breaking down the time from the current moment (\(t = 0\)) to the option's maturity (\(T\)) into a finite number of steps (\(N\)). The more steps you use, the more accurate the price becomes, eventually converging to the theoretical option price.
 
 \section{Binomial Tree Structure}
 
-A binomial tree models the possible price movements of the underlying asset over time. At each step, the asset price can move either up or down. The price at any node in the tree is calculated using the formula:
+A binomial tree models the possible price movements of the underlying asset over time. At each step, the asset price can either go up or down. The price at any node in the tree is calculated using the formula:
 
-\begin{equation}
+\[
 S_{i,j} = S_0 \cdot u^j \cdot d^{i-j}
-\end{equation}
+\]
 
 where:
 \begin{itemize}
@@ -17,87 +17,71 @@ where:
     \item \(S_0\) is the initial stock price,
     \item \(u = e^{\sigma \sqrt{\Delta t}}\) is the up factor,
     \item \(d = \frac{1}{u}\) is the down factor,
-    \item \(\Delta t = \frac{T}{N}\) is the time increment per step, and
+    \item \(\Delta t = \frac{T}{N}\) is the time increment per step,
     \item \(\sigma\) is the volatility of the underlying asset.
 \end{itemize}
 
-The risk-neutral probability of an upward movement, \(p\), and a downward movement, \(q\), are defined as:
+The risk-neutral probabilities of an upward movement (\(p\)) and a downward movement (\(q\)) are:
 
-\begin{equation}
+\[
 p = \frac{e^{r \Delta t} - d}{u - d}, \quad q = 1 - p
-\end{equation}
+\]
 
 where \(r\) is the risk-free interest rate.
 
 \section{Example Calculation}
 
-Let us consider an up-and-in European call option with the following parameters:
-\begin{itemize}
-    \item Spot price (\(S_0\)): 100,
-    \item Barrier level (\(B\)): 105,
-    \item Strike price (\(K\)): 90,
-    \item Risk-free rate (\(r\)): 0.05,
-    \item Time to maturity (\(T\)): 1 year,
-    \item Volatility (\(\sigma\)): 0.2,
-    \item Number of steps (\(N\)): 3.
-\end{itemize}
+Let's consider an up-and-out European style put option with these parameters:
+\(S_0 = 100\), \(B = 120\), \(K = 100\), \(r = 0.05\), \(T = 1\ \text{year}\), \(\sigma = 0.2\), \(N = 3\).
 
-Using these parameters:
 \begin{itemize}
     \item The time increment per step is:
     
-
-\[
-    \Delta t = \frac{T}{N} = \frac{1}{3} \approx 0.3333 \, \text{years}.
+    \[
+    \Delta t = \frac{T}{N} = \frac{1}{3} \approx 0.3333 \, \text{years}
     \]
-
 
     \item The up and down factors are:
     
-
-\[
+    \[
     u = e^{\sigma \sqrt{\Delta t}} = e^{0.2 \sqrt{0.3333}} \approx 1.1224, \quad d = \frac{1}{u} \approx 0.8909
     \]
 
-
     \item The risk-neutral probabilities are:
     
-
-\[
-    p = \frac{e^{r \Delta t} - d}{u - d} = \frac{e^{0.05 \cdot 0.3333} - 0.8909}{1.1224 - 0.8909} \approx 0.5438, \quad q = 1 - p = 0.4562.
+    \[
+    p = \frac{e^{r \Delta t} - d}{u - d} = \frac{e^{0.05 \cdot 0.3333} - 0.8909}{1.1224 - 0.8909} \approx 0.5438, \\ q = 1 - p = 0.4562
     \]
 
+    \item The payoff for an up-and-out European-style barrier put option at maturity is defined as:
 
+    \[ 
+    \text{Payoff} = 
+    \begin{cases} 
+    \max(K - S_T, 0), & \text{if } \max(S_t) < B \\ 
+    0, & \text{if } \max(S_t) \geq B 
+    \end{cases}
+    \]
+
+    where \(t \in [0, T]\).
+    
 \end{itemize}
 
-\section{Payoff Calculation}
-
-To calculate the option price, we build the binomial tree and track the stock price at each node. At maturity (\(t = T\)), the payoff for an up-and-in European call option is defined as:
-
-\begin{equation}
-\text{Payoff} =
-\begin{cases} 
-\max(S_T - K, 0), & \text{if } \max(S_t) \geq B \text{ for } t \in [0, T], \\
-0, & \text{otherwise.}
-\end{cases}
-\end{equation}
-
-For the given parameters:
-\begin{itemize}
-    \item If the stock price reaches or exceeds \(B = 90\) during its lifetime, the payoff is calculated as \(\max(S_T - K, 0)\).
-    \item Otherwise, the option expires worthless, with a payoff of 0.
-\end{itemize}
 
 \section{Tree Construction and Results}
-
-Figure \ref{fig:binomial-tree} illustrates the binomial tree for the given parameters, showing the possible stock price movements and the resulting option values at each node. The calculated option price, considering the up-and-in barrier condition, is obtained through backward induction along the tree. This ensures that the barrier condition is applied at each step. The final option price is 16.42.
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.55\linewidth]{content/images/three-step.png}
+    \caption{Binomial Tree with Barrier Level \(B = 120\) and Strike Price \(K = 100\).}
+    \label{fig:binomial-tree}
+\end{figure}
+Figure \ref{fig:binomial-tree} illustrates the binomial tree for the given parameters, showing the possible stock price movements and the resulting option values at each node. The calculated option price, considering the up-and-out barrier condition, is obtained through backward induction along the tree. This ensures that the barrier condition is applied at each step. The final option price using this method is 6.17. For reference, the actual option price using the analytical solution is 5.36.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.75\linewidth]{content/images/three-step.png}
-    \caption{Binomial Tree with Barrier Level \(B = 90\) and Strike Price \(K = 105\).}
-    \label{fig:binomial-tree}
+    \includegraphics[width=.65\linewidth]{content/images/numstepsvsoptionprice.png}
+    \caption{Option price converge to analytical solution as number of steps rise.}
+    \label{fig:binom-nofsteps}
 \end{figure}
 
-The binomial tree method provides a flexible and intuitive framework for pricing options, including barrier options. However, as shown in this example, its computational requirements grow significantly with the number of steps \(N\), making it less efficient for path-dependent options. Alternative methods, such as Monte Carlo simulations or analytical solutions, may be more suitable for pricing complex derivatives.
+The binomial tree method is great for pricing various options, including barrier options, because it's intuitive and systematic. As shown in Figure \ref{fig:binom-nofsteps}, the option price gets closer to the analytical solution as the number of steps (N) increases. However, this accuracy comes with higher computational complexity, especially for path-dependent options. In such cases, methods like Monte Carlo simulations or analytical approaches can be more efficient and scalable, providing accuracy without the heavy computational load. Balancing flexibility and efficiency is crucial when choosing the right pricing method for complex financial derivatives.

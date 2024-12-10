@@ -32,22 +32,19 @@ Figure~\ref{fig:delta_upout} shows the delta behavior of an up-and-out put optio
 
 To further analyze the delta across different barrier options, refer to the table below:
 
+
 \begin{table}[htbp]
 \centering
 \begin{tabularx}{\textwidth}{|X|X|X|X|}
 \hline
 \textbf{Barrier Type}         & \textbf{Price Far from Barrier} & \textbf{Price Near the Barrier} & \textbf{Intuition}                              \\ 
 \hline
-\textbf{Up-and-Out (Knock-Out)} & Similar to vanilla options     & $\Delta \to 0$ as $S \to B$  & Probability of knock-out increases as $S$ nears $B$. \\ 
+\textbf{Knock-Out} & Similar to vanilla options     & $\Delta \to 0$ as $S \to B$  & Probability of knock-out increases as $S$ nears the barrier. \\ 
 \hline
-\textbf{Down-and-Out (Knock-Out)} & Similar to vanilla options     & $\Delta \to 0$ as $S \to B$  & Probability of knock-out increases as $S$ nears $B$. \\ 
-\hline
-\textbf{Up-and-In (Knock-In)}    & $\Delta \approx 0$ far from barrier   & $\Delta \uparrow$ as $S \to B$  & Option becomes active as the price hits the barrier. \\ 
-\hline
-\textbf{Down-and-In (Knock-In)}  & $\Delta \approx 0$ far from barrier   & $\Delta \uparrow$ as $S \to B$  & Option becomes active as the price hits the barrier. \\ 
+\textbf{Knock-In}    & $\Delta \approx 0$ far from barrier   & $\Delta \uparrow$ as $S \to B$  & Option becomes active as the stock price nears the barrier. \\ 
 \hline
 \end{tabularx}
-\caption{Delta behavior for different types of barrier options.}
+\caption{Delta behavior for Knock-In and Knock-Out barrier options.}
 \label{tab:delta_barrier_options}
 \end{table}
 
@@ -60,7 +57,7 @@ To further analyze the delta across different barrier options, refer to the tabl
 The visual analysis in Figure~\ref{fig:delta_upout} and the insights from Table~\ref{tab:delta_barrier_options} provide a comprehensive understanding of how delta behaves across different types of barrier options.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.65\linewidth]{content/images/delta_upout.png}
+    \includegraphics[width=.65\linewidth]{content/images/delta.png}
     \caption{Delta of up-and-out Put Option vs. the Stock Price.}
     \label{fig:delta_upout}
 \end{figure}
@@ -73,24 +70,32 @@ Gamma (\(\Gamma\)) for a barrier option measures the rate of change of delta (\(
 \]
 
 For \textbf{knock-in} and \textbf{knock-out} barrier options, gamma exhibits unique behavior due to the presence of the barrier. The interaction between the price of the stock, the barrier level and the time to maturity influences how gamma behaves in different scenarios.
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\hline
+\textbf{Barrier Type}         & \textbf{Price Far from Barrier} & \textbf{Price Near the Barrier} & \textbf{Intuition}                              \\ 
+\hline
+\textbf{Knock-Out} & Similar to vanilla options     & $\Gamma \uparrow$ as $S \to B$  & Gamma spikes as the price nears the barrier due to increased risk of knock-out. \\ 
+\hline
+\textbf{Knock-In}    & $\Gamma \approx 0$ far from barrier   & $\Gamma \uparrow$ as $S \to B$  & Gamma rises as the stock price approaches the barrier due to increased probability of activation. \\ 
+\hline
+\end{tabularx}
+\caption{Gamma behavior for Knock-In and Knock-Out barrier options.}
+\label{tab:gamma_barrier_options}
+\end{table}
+
 
 Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out put option as a function of the underlying stock price (\(S\)). 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.65\linewidth]{content/images/gamma-upout.png}
+    \includegraphics[width=.65\linewidth]{content/images/gamma.png}
     \caption{Gamma behavior of an up-and-out Put Option vs. the Stock Price.}
     \label{fig:gamma_behavior}
 \end{figure}
 
 \section*{3. Vega (\(\nu\))}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=.65\linewidth]{content/images/vega_upout.png}
-    \caption{Vega vs. Volatility of an Up-and-Out Put Option}
-    \label{fig:vega_behavior}
-\end{figure}
 
 \textbf{Vega (\(\nu\))} measures the sensitivity of the option price to changes in volatility. For barrier options, the calculation of vega incorporates adjustments to account for the probability of breaching the barrier level under varying volatility conditions.
 \[
@@ -102,7 +107,16 @@ Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out 
     \item \textbf{Knock-Out Options:} Increased volatility can lead to a higher probability of the option being knocked out, reducing its value. Therefore, \(\nu\) will tend to be negative for these types of options.
 \end{itemize}
 
-The visualization shown in Figure~\ref{fig:vega_behavior} provides insights into how Vega behaves with changes in volatility across up-and-out options. The sensitivity patterns are influenced by the interplay between volatility and the probability of breaching the barrier level.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/vega.png}
+    \caption{Vega vs Stock Price of an Up-and-Out Put Option}
+    \label{fig:vega_behavior}
+\end{figure}
+
+The visualization shown in Figure~\ref{fig:vega_behavior} provides insights into how Vega behaves with changes in stock price across up-and-out options. The sensitivity patterns are influenced by the interplay between volatility and the probability of breaching the barrier level.
+
+
 
 
 \section*{4. Theta (\(\Theta\))}
@@ -113,8 +127,8 @@ Barrier options are unique because their payoff depends on the underlying asset 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.65\linewidth]{content/images/theta_upout.png}
-    \caption{Theta vs. Time to Maturity of an Up-and-Out Put Option}
+    \includegraphics[width=.65\linewidth]{content/images/theta.png}
+    \caption{Theta vs Stock Price of an Up-and-Out Put Option}
     \label{fig:theta_behavior}
 \end{figure}
 
@@ -126,7 +140,7 @@ Barrier options are unique because their payoff depends on the underlying asset 
     \item \textbf{Proximity to the Barrier:} Theta becomes more sensitive when the underlying price is near the barrier level. This reflects the increased path dependency and likelihood of barrier activation.
 \end{itemize}
 
-The visualization in Figure~\ref{fig:theta_behavior} illustrates the relationship between time to maturity and theta for an up-and-out put option. This analysis highlights how theta's sensitivity varies depending on proximity to the barrier and the remaining time in the option's life. It is critical to consider these patterns when employing barrier options in trading strategies, especially as expiration approaches.
+The visualization in Figure~\ref{fig:theta_behavior} illustrates the relationship between stock price and theta for an up-and-out put option. This analysis highlights how theta's sensitivity varies depending on proximity to the barrier and the remaining time in the option's life. It is critical to consider these patterns when employing barrier options in trading strategies, especially as expiration approaches.
 
 
 \section*{5. Rho (\(\rho\))}
@@ -136,17 +150,21 @@ Rho for barrier options measures the sensitivity of the option price to changes 
 \[
 \rho = \frac{\partial \text{Option Price}}{\partial r}
 \]
+The visual behavior in Figure~\ref{fig:rho_behavior} illustrates how changes in the risk-free interest rate (\(r\)) impact the value of an up-and-out barrier option under varying interest rate conditions. 
 
+When interest rates rise:
 \begin{itemize}
-    \item \textbf{Knock-In Options:} An increase in interest rates generally leads to a higher value for knock-in options. This is because higher rates make the option more attractive compared to other financial instruments by increasing the present value of the potential payoff.
-    \item \textbf{Knock-Out Options:} The sensitivity of knock-out options to changes in interest rates is less pronounced compared to knock-in options, especially if the option is at a high risk of being knocked out before maturity.
+    \item \textbf{Knock-In Options:} Tend to show a positive relationship with Rho (\(\rho\)). This reflects that higher interest rates increase the present value of the potential payoff, making the knock-in option more valuable.
+    \item \textbf{Knock-Out Options:} Tend to show muted sensitivity to changes in the interest rate. This is because the likelihood of being knocked out (and thus losing value) dominates any benefit gained from higher interest rates.
 \end{itemize}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.65\linewidth]{content/images/rho_upout.png}
-    \caption{Rho vs. Interest Rate Changes for an Up-and-Out Put Option}
+    \includegraphics[width=.65\linewidth]{content/images/rho.png}
+    \caption{Rho vs Stock Price for an Up-and-Out Put Option}
     \label{fig:rho_behavior}
 \end{figure}
 
-The visual behavior in Figure~\ref{fig:rho_behavior} depicts how the effect of interest rate changes impacts the value of an up-and-out barrier option under various interest rate conditions. When rates rise, knock-in options tend to show a positive relationship with Rho, reflecting the increased value from higher risk-free rates. Conversely, knock-out options tend to show muted sensitivity, as their value diminishes if the likelihood of being knocked out rises.
+
+
+The plot shows how these dynamics play out as the stock price changes. The up-and-out barrier options demonstrate that knock-in options' sensitivity to interest rates strengthens under higher rates, while knock-out options exhibit relatively stable but low sensitivity. This highlights how the risk-free rate affects the economics of barrier options, particularly those that depend on crossing specific price thresholds.
