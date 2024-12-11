@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  10 DEC 2024 22:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  11 DEC 2024 04:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,7 +1073,7 @@ Package hyperref Info: Link coloring ON on input line 61.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (content/titlepages.tex
-<images (2).png, id=102, 651.44789pt x 488.58592pt>
+<images (2).png, id=106, 651.44789pt x 488.58592pt>
 File: images (2).png Graphic file (type png)
 <use images (2).png>
 Package pdftex.def Info: images (2).png  used on input line 8.
@@ -1113,13 +1113,13 @@ Chapter 1.
 Chapter 2.
 [5
 
-]
-<content/images/surface.png, id=182, 1018.2843pt x 395.3169pt>
+] [6]
+<content/images/surface.png, id=196, 1018.2843pt x 395.3169pt>
 File: content/images/surface.png Graphic file (type png)
 <use content/images/surface.png>
-Package pdftex.def Info: content/images/surface.png  used on input line 83.
+Package pdftex.def Info: content/images/surface.png  used on input line 86.
 (pdftex.def)             Requested size: 422.77664pt x 164.12582pt.
- [6]) (content/chapter-montecarlo.tex [7 <./content/images/surface.png>]
+) (content/chapter-montecarlo.tex [7 <./content/images/surface.png>]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
@@ -1378,13 +1378,13 @@ Chapter 4.
 [10
 
 ]
-<content/images/three-step.jpg, id=219, 615.0478pt x 411.03563pt>
+<content/images/three-step.jpg, id=223, 615.0478pt x 411.03563pt>
 File: content/images/three-step.jpg Graphic file (type jpg)
 <use content/images/three-step.jpg>
 Package pdftex.def Info: content/images/three-step.jpg  used on input line 74.
 (pdftex.def)             Requested size: 352.31625pt x 235.45303pt.
  [11 <./content/images/three-step.jpg>]
-<content/images/numstepsvsoptionprice.png.jpg, id=226, 442.65375pt x 406.51875p
+<content/images/numstepsvsoptionprice.png.jpg, id=230, 442.65375pt x 406.51875p
 t>
 File: content/images/numstepsvsoptionprice.png.jpg Graphic file (type jpg)
 <use content/images/numstepsvsoptionprice.png.jpg>
@@ -1396,114 +1396,115 @@ input line 82.
 Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 22.
+(hyperref)                removing `math shift' on input line 6.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 22.
+(hyperref)                removing `\Delta' on input line 6.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/bx/n/10 Up-and-Out
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
 []|\OT1/cmr/bx/n/10 Down-and-Out
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
 []|\OT1/cmr/bx/n/10 Up-and-In
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 []|\OT1/cmr/bx/n/10 Down-and-In
  []
 
 
-Overfull \hbox (35.48903pt too wide) in paragraph at lines 36--49
+Overfull \hbox (35.48903pt too wide) in paragraph at lines 14--27
  [][] 
  []
 
 [13
 
 ]
-<content/images/delta_upout.png, id=243, 752.8125pt x 451.6875pt>
+<content/images/delta_upout.png, id=249, 752.8125pt x 451.6875pt>
 File: content/images/delta_upout.png Graphic file (type png)
 <use content/images/delta_upout.png>
-Package pdftex.def Info: content/images/delta_upout.png  used on input line 62.
+Package pdftex.def Info: content/images/delta_upout.png  used on input line 44.
 
 (pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 69.
+(hyperref)                removing `math shift' on input line 51.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Gamma' on input line 69.
+(hyperref)                removing `\Gamma' on input line 51.
 
-[14 <./content/images/delta_upout.png>]
-Overfull \hbox (35.48903pt too wide) in paragraph at lines 80--89
+
+Overfull \hbox (35.48903pt too wide) in paragraph at lines 63--72
  [][] 
  []
 
-<content/images/gamma-upout.png, id=250, 752.8125pt x 451.6875pt>
+[14 <./content/images/delta_upout.png>]
+<content/images/gamma-upout.png, id=256, 752.8125pt x 451.6875pt>
 File: content/images/gamma-upout.png Graphic file (type png)
 <use content/images/gamma-upout.png>
-Package pdftex.def Info: content/images/gamma-upout.png  used on input line 98.
+Package pdftex.def Info: content/images/gamma-upout.png  used on input line 81.
 
 (pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 103.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\nu' on input line 103.
+(hyperref)                removing `math shift' on input line 86.
 
-[15 <./content/images/gamma-upout.png>]
-<content/images/vega_upout.png, id=258, 752.8125pt x 451.6875pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 86.
+
+<content/images/vega_upout.png, id=257, 752.8125pt x 451.6875pt>
 File: content/images/vega_upout.png Graphic file (type png)
 <use content/images/vega_upout.png>
-Package pdftex.def Info: content/images/vega_upout.png  used on input line 117.
+Package pdftex.def Info: content/images/vega_upout.png  used on input line 101.
 
 (pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
+[15 <./content/images/gamma-upout.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 124.
+(hyperref)                removing `\Theta' on input line 108.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Theta' on input line 124.
-
-<content/images/theta_upout.png, id=260, 752.8125pt x 451.6875pt>
+<content/images/theta_upout.png, id=267, 752.8125pt x 451.6875pt>
 File: content/images/theta_upout.png Graphic file (type png)
 <use content/images/theta_upout.png>
-Package pdftex.def Info: content/images/theta_upout.png  used on input line 132
+Package pdftex.def Info: content/images/theta_upout.png  used on input line 116
 .
 (pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
-[16 <./content/images/vega_upout.png>]
+[16 <./content/images/vega_upout.png> <./content/images/theta_upout.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 148.
+(hyperref)                removing `math shift' on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 148.
+(hyperref)                removing `\rho' on input line 132.
 
-[17 <./content/images/theta_upout.png>]
-<content/images/rho_upout.png, id=274, 752.8125pt x 451.6875pt>
+<content/images/rho_upout.png, id=276, 752.8125pt x 451.6875pt>
 File: content/images/rho_upout.png Graphic file (type png)
 <use content/images/rho_upout.png>
-Package pdftex.def Info: content/images/rho_upout.png  used on input line 164.
+Package pdftex.def Info: content/images/rho_upout.png  used on input line 148.
 (pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
-) (content/bibliography.tex [18 <./content/images/rho_upout.png>]) [19
+[17]) (content/bibliography.tex [18 <./content/images/rho_upout.png>]) [19
 
-] (content/appendix.tex
+]
+(content/appendix.tex
 Appendix A.
 [20
 
@@ -1513,23 +1514,14 @@ Appendix A.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.25pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Project.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Project.out':
-(rerunfilecheck)             Before: 5416E1AE0A6E0E3726C1377BCE2AE868;4090
-(rerunfilecheck)             After:  AF8C979810563675B7C62677D049966B;4266.
+Package rerunfilecheck Info: File `Project.out' has not changed.
+(rerunfilecheck)             Checksum: AF8C979810563675B7C62677D049966B;4266.
  ) 
 Here is how much of TeX's memory you used:
- 35455 strings out of 476326
- 822158 string characters out of 5787722
+ 35459 strings out of 476326
+ 822213 string characters out of 5787722
  1874660 words of memory out of 5000000
- 55222 multiletter control sequences out of 15000+600000
+ 55223 multiletter control sequences out of 15000+600000
  523120 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,104p,892b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1550,9 +1542,9 @@ sfonts/cm/cmsy10.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/drebi/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Project.pdf (22 pages, 826422 bytes).
+Output written on Project.pdf (22 pages, 827883 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 250 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
+ 258 words of extra memory for PDF output out of 10000 (max. 10000000)
 

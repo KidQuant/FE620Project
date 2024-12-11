@@ -1,39 +1,17 @@
 \chapter{The Greeks for Barrier Options}
 \label{sec:greeks}
 
-The Greeks are key sensitivities in option pricing that measure how the price of an option changes with respect to various factors such as the underlying asset price, time to maturity, volatility, and interest rates. For barrier options, the calculation of the Greeks is more complex due to the added condition of a barrier, which affects the option's price path and behavior.
-
-For the plots in this section, the following parameters will be used:
-
-\[
-\begin{aligned}
-S_0 &= 80.0 \quad \text{(spot stock price)} \\
-K &= 50 \quad \text{(strike price)} \\
-T &= 1.0 \quad \text{(time to maturity in years)} \\
-r &= 0.1 \quad \text{(risk-free rate)} \\
-\sigma &= 0.2 \quad \text{(volatility)} \\
-B &= 100 \quad \text{(barrier level)}
-\end{aligned}
-\]
-
-
-
+The Greeks are key sensitivities in option pricing that measure how the price of an option changes with respect to various factors such as the underlying asset price, time to maturity, volatility, and interest rates. For barrier options, the calculation of the Greeks is more complex due to the added condition of a barrier, which affects the option's price path and behavior. To calculate the greeks, we will assume $S_0=80, K=50, T=1, r=10\%, \sigma=20\%, \text{ and } B=100.$
 
 \section{Delta (\(\Delta\))}
 
-Delta for a barrier option measures the sensitivity of the option price to changes in the underlying asset price (\(S\)). It represents the rate of change of the option's price with respect to small changes in the underlying price.
-\[
-\Delta = \frac{\partial \text{Option Price}}{\partial S}
-\]
-
-For \textbf{knock-in} barrier options, delta behaves similarly to that of a standard European option but is influenced by the presence of the barrier. It reflects how changes in the underlying price affect the probability of the barrier being breached and the option becoming active.
-
-Figure~\ref{fig:delta_upout} shows the delta behavior of an up-and-out put option as a function of the underlying stock price (\(S\)). When the stock price is well below the barrier level (\(B\)), delta behaves similarly to a vanilla European put option. As the price approaches the barrier, delta tends toward zero because the likelihood of the option being knocked out increases, reducing its sensitivity.
-
-To further analyze the delta across different barrier options, refer to the table below:
+Delta measures the sensitivity of the option price to changes in the underlying asset price (\(S\)). It represents the rate of change of the option's price with respect to small changes in the underlying price.
+\begin{equation}
+	\Delta = \frac{\partial \text{Option Price}}{\partial S}
+\end{equation}
 \begin{center}
-	\begin{table}[H]
-		\begin{tabular}{ | m{3cm} | m{5cm}| m{4cm} | m{4cm}|} 
+	\begin{table}
+		\begin{tabular}{ | m{3cm} | m{4.5cm}| m{4.5cm} | m{4cm}|} 
 			\hline
 			\textbf{Barrier Type} & \textbf{Price Far from Barrier} & \textbf{Price Near the Barrier} & \textbf{Intuition}  \\
 			\hline
@@ -50,13 +28,17 @@ To further analyze the delta across different barrier options, refer to the tabl
 		\label{tab:delta_barrier_options}
 	\end{table}
 \end{center}
+
+For \textbf{knock-in} barrier options, delta behaves similarly to that of a standard European option but is influenced by the presence of the barrier. It reflects how changes in the underlying price affect the probability of the barrier being breached and the option becoming active. Figure (\ref{fig:delta_upout}) shows the delta behavior of an up-and-out put option as a function of the underlying stock price, $S$. When the stock price is well below the barrier, $B$, delta behaves similarly to a vanilla European put option. As the price approaches the barrier, delta tends toward zero because the likelihood of the option being knocked out increases, reducing its sensitivity.
+
+To further analyze the delta across different barrier options, refer to the table below:
 \textbf{Key Intuition:}
 \begin{itemize}
     \item \textbf{Knock-Out Options:} Lose their sensitivity as $\Delta$ tends toward $0$ as the likelihood of being knocked out near the barrier increases.
     \item \textbf{Knock-In Options:} Show increasing sensitivity as the underlying price nears the barrier because the probability of activation rises.
 \end{itemize}
 
-The visual analysis in Figure~\ref{fig:delta_upout} and the insights from Table~\ref{tab:delta_barrier_options} provide a comprehensive understanding of how delta behaves across different types of barrier options.
+The insights from Figure (\ref{fig:delta_upout}) and Table (\ref{tab:delta_barrier_options}) provide a comprehensive understanding of how delta behaves across different types of barrier options.
 \begin{figure}[H]
     \centering
     \includegraphics[width=.65\linewidth]{content/images/delta_upout.png}
@@ -68,10 +50,11 @@ The visual analysis in Figure~\ref{fig:delta_upout} and the insights from Table~
 
 \section{Gamma (\(\Gamma\))}
 
-Gamma (\(\Gamma\)) for a barrier option measures the rate of change of delta (\(\Delta\)) with respect to changes in the underlying asset price (\(S\)). It represents the curvature or sensitivity of delta in response to movements in the underlying price. It provides insights into how rapidly an option's delta will change as the underlying price fluctuates.
-\[
-\Gamma = \frac{\partial^2 \text{Option Price}}{\partial S^2}
-\]
+Gamma, $\Gamma$, measures the rate of change of delta, $\Delta$, with respect to changes in the underlying asset price $S$. It represents the curvature or sensitivity of delta in response to movements in the underlying price. It provides insights into how rapidly an option's delta will change as the underlying price fluctuates. Gamma can be derived by the following formula:
+
+\begin{equation}
+	\Gamma = \frac{\partial^2 \text{Option Price}}{\partial S^2}
+\end{equation}
 
 For \textbf{knock-in} and \textbf{knock-out} barrier options, gamma exhibits unique behavior due to the presence of the barrier. The interaction between the price of the stock, the barrier level and the time to maturity influences how gamma behaves in different scenarios.
 
@@ -91,7 +74,7 @@ For \textbf{knock-in} and \textbf{knock-out} barrier options, gamma exhibits uni
 	\end{table}
 \end{center}
 
-Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out put option as a function of the underlying stock price (\(S\)). 
+Figure (\ref{fig:gamma_behavior}) illustrates the gamma behavior of an up-and-out put option as a function of the underlying stock price $S$. 
 
 \begin{figure}[h]
     \centering
@@ -102,11 +85,12 @@ Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out 
 
 \section{Vega (\(\nu\))}
 
-\textbf{Vega (\(\nu\))} measures the sensitivity of the option price to changes in volatility. For barrier options, the calculation of vega incorporates adjustments to account for the probability of breaching the barrier level under varying volatility conditions.
-\[
-\nu = \frac{\partial \text{Option Price}}{\partial \sigma}
-\]
+\textbf{Vega}, $\nu$, measures the sensitivity of the option price to changes in volatility. For barrier options, the calculation of vega incorporates adjustments to account for the probability of breaching the barrier level under varying volatility conditions. Vega can be derived from the following formula:
 
+\begin{equation}
+\nu = \frac{\partial \text{Option Price}}{\partial \sigma}
+\end{equation}
+Vega and barrier options is denoted by the following relationship:
 \begin{itemize}
     \item \textbf{Knock-In Options:} Increased volatility raises the likelihood of the underlying asset price crossing the barrier level, making the option more valuable. As a result, \(\nu\) (vega) will generally be positive.
     \item \textbf{Knock-Out Options:} Increased volatility can lead to a higher probability of the option being knocked out, reducing its value. Therefore, \(\nu\) will tend to be negative for these types of options.
