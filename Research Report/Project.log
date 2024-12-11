@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  10 DEC 2024 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  10 DEC 2024 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,7 +1073,7 @@ Package hyperref Info: Link coloring ON on input line 61.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (content/titlepages.tex
-<images (2).png, id=106, 651.44789pt x 488.58592pt>
+<images (2).png, id=102, 651.44789pt x 488.58592pt>
 File: images (2).png Graphic file (type png)
 <use images (2).png>
 Package pdftex.def Info: images (2).png  used on input line 8.
@@ -1114,10 +1114,10 @@ Chapter 2.
 [5
 
 ]
-<content/images/surface.png, id=187, 1018.2843pt x 395.3169pt>
+<content/images/surface.png, id=182, 1018.2843pt x 395.3169pt>
 File: content/images/surface.png Graphic file (type png)
 <use content/images/surface.png>
-Package pdftex.def Info: content/images/surface.png  used on input line 82.
+Package pdftex.def Info: content/images/surface.png  used on input line 74.
 (pdftex.def)             Requested size: 422.77664pt x 164.12582pt.
  [6]) (content/chapter-montecarlo.tex [7 <./content/images/surface.png>]
 Chapter 3.
@@ -1367,7 +1367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
  []
 
 
-Overfull \hbox (53.71727pt too wide) in paragraph at lines 4--23
+Overfull \hbox (53.71727pt too wide) in paragraph at lines 4--21
  [][] 
  []
 
@@ -1378,16 +1378,21 @@ Chapter 4.
 [10
 
 ]
-<content/images/three-step.jpg, id=225, 615.0478pt x 411.03563pt>
+<content/images/three-step.jpg, id=217, 615.0478pt x 411.03563pt>
 File: content/images/three-step.jpg Graphic file (type jpg)
 <use content/images/three-step.jpg>
-Package pdftex.def Info: content/images/three-step.jpg  used on input line 98.
+Package pdftex.def Info: content/images/three-step.jpg  used on input line 74.
 (pdftex.def)             Requested size: 352.31625pt x 235.45303pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (content/chapter-greeks.tex [11] [12 <./content/images/three-step.jpg>]
+ [11 <./content/images/three-step.jpg>]
+<content/images/numstepsvsoptionprice.png.jpg, id=224, 442.65375pt x 406.51875p
+t>
+File: content/images/numstepsvsoptionprice.png.jpg Graphic file (type jpg)
+<use content/images/numstepsvsoptionprice.png.jpg>
+Package pdftex.def Info: content/images/numstepsvsoptionprice.png.jpg  used on 
+input line 82.
+(pdftex.def)             Requested size: 305.33789pt x 280.4238pt.
+) (content/chapter-greeks.tex
+[12 <./content/images/numstepsvsoptionprice.png.jpg>]
 Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1399,302 +1404,104 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 40--40
-[]|\OT1/cmr/bx/n/10 Barrier
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-[]|\OT1/cmr/bx/n/10 Price
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-\OT1/cmr/bx/n/10 Far
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-\OT1/cmr/bx/n/10 from
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-[]|\OT1/cmr/bx/n/10 Price
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-\OT1/cmr/bx/n/10 Near
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
-\OT1/cmr/bx/n/10 the
- []
-
-
-Overfull \hbox (4.45775pt too wide) in paragraph at lines 40--41
-[]|\OT1/cmr/bx/n/10 Intuition| 
+[]|\OT1/cmr/bx/n/10 Up-and-Out
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 42--42
-[]|\OT1/cmr/bx/n/10 Up-
+[]|\OT1/cmr/bx/n/10 Down-and-Out
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
-\OT1/cmr/bx/n/10 and-
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\OT1/cmr/bx/n/10 Up-and-In
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
-\OT1/cmr/bx/n/10 Out
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\OT1/cmr/bx/n/10 Down-and-In
  []
 
 
-Overfull \hbox (0.63861pt too wide) in paragraph at lines 42--42
-\OT1/cmr/bx/n/10 (Knock-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
-[]|\OT1/cmr/m/n/10 Similar
- []
-
-
-Overfull \hbox (9.22202pt too wide) in paragraph at lines 42--43
-[]|\OT1/cmr/m/n/10 Probability
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-\OT1/cmr/m/n/10 out
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-\OT1/cmr/m/n/10 in-creases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-\OT1/cmr/m/n/10 as $\OML/cmm/m/it/10 S$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]|\OT1/cmr/bx/n/10 Down-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-\OT1/cmr/bx/n/10 and-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-\OT1/cmr/bx/n/10 Out
- []
-
-
-Overfull \hbox (0.63861pt too wide) in paragraph at lines 43--43
-\OT1/cmr/bx/n/10 (Knock-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]|\OT1/cmr/m/n/10 Similar
- []
-
-
-Overfull \hbox (9.22202pt too wide) in paragraph at lines 43--44
-[]|\OT1/cmr/m/n/10 Probability
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-\OT1/cmr/m/n/10 out
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-\OT1/cmr/m/n/10 in-creases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-\OT1/cmr/m/n/10 as $\OML/cmm/m/it/10 S$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]|\OT1/cmr/bx/n/10 Up-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-\OT1/cmr/bx/n/10 and-In
- []
-
-
-Overfull \hbox (0.63861pt too wide) in paragraph at lines 45--45
-\OT1/cmr/bx/n/10 (Knock-
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 45--45
-[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 0$
- []
-
-
-Underfull \hbox (badness 1622) in paragraph at lines 45--45
-\OT1/cmr/m/n/10 far from
- []
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 45--45
-[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 "$ \OT1/cmr/m/n/10 as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-[]|\OT1/cmr/m/n/10 Option
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-\OT1/cmr/m/n/10 be-comes
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 45--46
-\OT1/cmr/m/n/10 hits the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
-[]|\OT1/cmr/bx/n/10 Down-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
-\OT1/cmr/bx/n/10 and-In
- []
-
-
-Overfull \hbox (0.63861pt too wide) in paragraph at lines 47--47
-\OT1/cmr/bx/n/10 (Knock-
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 47--47
-[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 0$
- []
-
-
-Underfull \hbox (badness 1622) in paragraph at lines 47--47
-\OT1/cmr/m/n/10 far from
- []
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 47--47
-[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 "$ \OT1/cmr/m/n/10 as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-[]|\OT1/cmr/m/n/10 Option
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-\OT1/cmr/m/n/10 be-comes
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 47--48
-\OT1/cmr/m/n/10 hits the
+Overfull \hbox (35.48903pt too wide) in paragraph at lines 36--49
+ [][] 
  []
 
 [13
 
 ]
-<content/images/delta_upout.png, id=246, 722.7pt x 433.62pt>
+<content/images/delta_upout.png, id=241, 752.8125pt x 451.6875pt>
 File: content/images/delta_upout.png Graphic file (type png)
 <use content/images/delta_upout.png>
-Package pdftex.def Info: content/images/delta_upout.png  used on input line 64.
+Package pdftex.def Info: content/images/delta_upout.png  used on input line 62.
 
-(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+(pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 71.
+(hyperref)                removing `math shift' on input line 69.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Gamma' on input line 71.
+(hyperref)                removing `\Gamma' on input line 69.
 
-[14]
-<content/images/gamma-upout.png, id=253, 722.7pt x 433.62pt>
+[14 <./content/images/delta_upout.png>]
+Overfull \hbox (35.48903pt too wide) in paragraph at lines 80--89
+ [][] 
+ []
+
+<content/images/gamma-upout.png, id=248, 752.8125pt x 451.6875pt>
 File: content/images/gamma-upout.png Graphic file (type png)
 <use content/images/gamma-upout.png>
-Package pdftex.def Info: content/images/gamma-upout.png  used on input line 84.
+Package pdftex.def Info: content/images/gamma-upout.png  used on input line 98.
 
-(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
- [15 <./content/images/delta_upout.png> <./content/images/gamma-upout.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 89.
-
+(pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\nu' on input line 89.
+(hyperref)                removing `math shift' on input line 103.
 
-<content/images/vega_upout.png, id=261, 722.7pt x 433.62pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 103.
+
+[15 <./content/images/gamma-upout.png>]
+<content/images/vega_upout.png, id=256, 752.8125pt x 451.6875pt>
 File: content/images/vega_upout.png Graphic file (type png)
 <use content/images/vega_upout.png>
-Package pdftex.def Info: content/images/vega_upout.png  used on input line 93.
-(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
+Package pdftex.def Info: content/images/vega_upout.png  used on input line 117.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 111.
+(pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Theta' on input line 111.
+(hyperref)                removing `math shift' on input line 127.
 
-<content/images/theta_upout.png, id=263, 722.7pt x 433.62pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Theta' on input line 127.
+
+<content/images/theta_upout.png, id=258, 752.8125pt x 451.6875pt>
 File: content/images/theta_upout.png Graphic file (type png)
 <use content/images/theta_upout.png>
-Package pdftex.def Info: content/images/theta_upout.png  used on input line 119
+Package pdftex.def Info: content/images/theta_upout.png  used on input line 135
 .
-(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
 [16 <./content/images/vega_upout.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
+(hyperref)                removing `math shift' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 135.
+(hyperref)                removing `\rho' on input line 151.
 
-<content/images/rho_upout.png, id=272, 722.7pt x 433.62pt>
+[17 <./content/images/theta_upout.png>]
+<content/images/rho_upout.png, id=272, 752.8125pt x 451.6875pt>
 File: content/images/rho_upout.png Graphic file (type png)
 <use content/images/rho_upout.png>
-Package pdftex.def Info: content/images/rho_upout.png  used on input line 149.
-(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (content/bibliography.tex [17 <./content/images/theta_upout.png>] [18 <./cont
-ent/images/rho_upout.png>]) [19
+Package pdftex.def Info: content/images/rho_upout.png  used on input line 167.
+(pdftex.def)             Requested size: 305.33789pt x 183.20811pt.
+) (content/bibliography.tex [18 <./content/images/rho_upout.png>]) [19
 
 ] (content/appendix.tex
 Appendix A.
@@ -1707,13 +1514,13 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.25pt have occurred.
 
 Package rerunfilecheck Info: File `Project.out' has not changed.
-(rerunfilecheck)             Checksum: DEEFB3BA53B611802A723CF6DDCC202A;4238.
+(rerunfilecheck)             Checksum: 5416E1AE0A6E0E3726C1377BCE2AE868;4090.
  ) 
 Here is how much of TeX's memory you used:
- 35440 strings out of 476326
- 821496 string characters out of 5787722
- 1875660 words of memory out of 5000000
- 55209 multiletter control sequences out of 15000+600000
+ 35453 strings out of 476326
+ 822133 string characters out of 5787722
+ 1874660 words of memory out of 5000000
+ 55222 multiletter control sequences out of 15000+600000
  523120 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,104p,892b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1734,9 +1541,9 @@ sfonts/cm/cmsy10.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/drebi/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Project.pdf (22 pages, 643286 bytes).
+Output written on Project.pdf (22 pages, 824575 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

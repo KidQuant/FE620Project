@@ -21,14 +21,6 @@ where $S$ is the stock price, $K$ is the strike price, $r$ is the risk-free rate
 A more rigourous proof for the solution to the Black-Scholes PDE can be found on \ref{section:A1} of the appendix.
 \section{Analytical Solution to Barrier Options}
 
-An essential concept in pricing barrier options is the in-out parity:
-\[
-	C_{\text{vanilla}}=C_{\text{up-in}}+C_{\text{up-out}}
-\]
-which we can use to derive the following relationship for a up-and-in call option$V_{\text{DIC}}$ as:
-\[
-	C_{\text{up-out}}=C_{\text{vanilla}}-C_{\text{up-in}}
-\]
 We start by changing the value of $T$ for $\tau=T-t$. From there, in order to have the PDE solutioni for the up-and-out call option, we begin to alter equation (\ref{eq:bs_call_option}). Let $H$ be the barrier price. Then when $B\geq K$, we have:
 \begin{equation}\label{eq:DOC}
 	C_{\text{up-out}}(S,t)=Se^{-q\tau}\left(N(d_1)-\left(\frac{B}{S}\right)^{2\lambda}N(d^\prime_1)\right)-Ke^{-r\tau}\left(N(d_2)-\left(\frac{B}{S}\right)^{2\lambda-2} N(d^\prime_2)\right)
