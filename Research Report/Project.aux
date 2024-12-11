@@ -28,8 +28,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}The Black-Scholes Model}{5}{section.2.1}\protected@file@percent }
 \newlabel{eq:BSM}{{2.1}{5}{The Black-Scholes Model}{equation.2.1.1}{}}
 \newlabel{eq:bs_call_option}{{2.2}{5}{The Black-Scholes Model}{equation.2.1.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Black-Scholes Solution to Barrier Options}{6}{section.2.2}\protected@file@percent }
-\newlabel{eq:DOC}{{2.4}{6}{Black-Scholes Solution to Barrier Options}{equation.2.2.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Analytical Solution to Barrier Options}{6}{section.2.2}\protected@file@percent }
+\newlabel{eq:DOC}{{2.4}{6}{Analytical Solution to Barrier Options}{equation.2.2.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Barrier Option Payoffs}{6}{section.2.3}\protected@file@percent }
 \newlabel{tab:barrier_payoff}{{2.3}{6}{Barrier Option Payoffs}{section.2.3}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Theoretical Values of Single Barrier Options}}{6}{table.2.1}\protected@file@percent }
@@ -39,20 +39,48 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Barrier Option Pricing with Monte Carlo}{8}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{eq:GBM}{{3.1}{8}{Barrier Option Pricing with Monte Carlo}{equation.3.0.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces MC Up-and-out call with $q=0\%,r=10\%, T=1,\sigma =20\%,K=100$}}{8}{table.3.1}\protected@file@percent }
 \newlabel{tab:MC_barrer}{{3.1}{8}{MC Up-and-out call with $q=0\%,r=10\%, T=1,\sigma =20\%,K=100$}{table.3.1}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}The Greeks for Barrier Options}{10}{chapter.4}\protected@file@percent }
+\newlabel{eq:GBM}{{3.1}{8}{Barrier Option Pricing with Monte Carlo}{equation.3.0.1}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Binomial Tree Method}{10}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:greeks}{{4}{10}{The Greeks for Barrier Options}{chapter.4}{}}
+\newlabel{sec:binomial-tree}{{4}{10}{Binomial Tree Method}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Binomial Tree Structure}{10}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Example Calculation}{10}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Payoff Calculation}{11}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Tree Construction and Results}{11}{section.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Binomial Tree with Barrier Level \(B = 90\) and Strike Price \(K = 105\).}}{12}{figure.4.1}\protected@file@percent }
+\newlabel{fig:binomial-tree}{{4.1}{12}{Binomial Tree with Barrier Level \(B = 90\) and Strike Price \(K = 105\)}{figure.4.1}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}The Greeks for Barrier Options}{13}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:greeks}{{5}{13}{The Greeks for Barrier Options}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Delta (\(\Delta \))}{13}{section.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Delta behavior for different types of barrier options.}}{14}{table.5.1}\protected@file@percent }
+\newlabel{tab:delta_barrier_options}{{5.1}{14}{Delta behavior for different types of barrier options}{table.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Delta of up-and-out Put Option vs. the Stock Price.}}{15}{figure.5.1}\protected@file@percent }
+\newlabel{fig:delta_upout}{{5.1}{15}{Delta of up-and-out Put Option vs. the Stock Price}{figure.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Delta Hedging}{15}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Gamma (\(\Gamma \))}{15}{section.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Gamma behavior of an up-and-out Put Option vs. the Stock Price.}}{15}{figure.5.2}\protected@file@percent }
+\newlabel{fig:gamma_behavior}{{5.2}{15}{Gamma behavior of an up-and-out Put Option vs. the Stock Price}{figure.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Vega (\(\nu \))}{16}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Vega vs. Volatility of an Up-and-Out Put Option}}{16}{figure.5.3}\protected@file@percent }
+\newlabel{fig:vega_behavior}{{5.3}{16}{Vega vs. Volatility of an Up-and-Out Put Option}{figure.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}4. Theta (\(\Theta \))}{16}{section.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Theta vs. Time to Maturity of an Up-and-Out Put Option}}{17}{figure.5.4}\protected@file@percent }
+\newlabel{fig:theta_behavior}{{5.4}{17}{Theta vs. Time to Maturity of an Up-and-Out Put Option}{figure.5.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Rho (\(\rho \))}{17}{section.5.5}\protected@file@percent }
 \bibstyle{plainnat}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Rho vs. Interest Rate Changes for an Up-and-Out Put Option}}{18}{figure.5.5}\protected@file@percent }
+\newlabel{fig:rho_behavior}{{5.5}{18}{Rho vs. Interest Rate Changes for an Up-and-Out Put Option}{figure.5.5}{}}
 \bibcite{JohnRubinstein1985}{1}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Formulas and Proofs}{13}{appendix.1.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Formulas and Proofs}{20}{appendix.1.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Black-Scholes PDE for Barrier Options}{13}{section.1.A.1}\protected@file@percent }
-\newlabel{section:A1}{{A.1}{13}{Black-Scholes PDE for Barrier Options}{section.1.A.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Payoffs Formulas for Single Barrier Options}{14}{section.1.A.2}\protected@file@percent }
-\newlabel{section:A2}{{A.2}{14}{Payoffs Formulas for Single Barrier Options}{section.1.A.2}{}}
-\gdef \@abspage@last{15}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Black-Scholes PDE for Barrier Options}{20}{section.1.A.1}\protected@file@percent }
+\newlabel{section:A1}{{A.1}{20}{Black-Scholes PDE for Barrier Options}{section.1.A.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Payoffs Formulas for Single Barrier Options}{21}{section.1.A.2}\protected@file@percent }
+\newlabel{section:A2}{{A.2}{21}{Payoffs Formulas for Single Barrier Options}{section.1.A.2}{}}
+\gdef \@abspage@last{22}

@@ -19,7 +19,7 @@ B &= 100 \quad \text{(barrier level)}
 
 
 
-\section*{1. Delta (\(\Delta\))}
+\section{Delta (\(\Delta\))}
 
 Delta for a barrier option measures the sensitivity of the option price to changes in the underlying asset price (\(S\)). It represents the rate of change of the option's price with respect to small changes in the underlying price.
 \[
@@ -32,24 +32,25 @@ Figure~\ref{fig:delta_upout} shows the delta behavior of an up-and-out put optio
 
 To further analyze the delta across different barrier options, refer to the table below:
 
-\begin{table}[htbp]
-\centering
-\begin{tabularx}{\textwidth}{|X|X|X|X|}
-\hline
-\textbf{Barrier Type}         & \textbf{Price Far from Barrier} & \textbf{Price Near the Barrier} & \textbf{Intuition}                              \\ 
-\hline
-\textbf{Up-and-Out (Knock-Out)} & Similar to vanilla options     & $\Delta \to 0$ as $S \to B$  & Probability of knock-out increases as $S$ nears $B$. \\ 
-\hline
-\textbf{Down-and-Out (Knock-Out)} & Similar to vanilla options     & $\Delta \to 0$ as $S \to B$  & Probability of knock-out increases as $S$ nears $B$. \\ 
-\hline
-\textbf{Up-and-In (Knock-In)}    & $\Delta \approx 0$ far from barrier   & $\Delta \uparrow$ as $S \to B$  & Option becomes active as the price hits the barrier. \\ 
-\hline
-\textbf{Down-and-In (Knock-In)}  & $\Delta \approx 0$ far from barrier   & $\Delta \uparrow$ as $S \to B$  & Option becomes active as the price hits the barrier. \\ 
-\hline
-\end{tabularx}
-\caption{Delta behavior for different types of barrier options.}
-\label{tab:delta_barrier_options}
-\end{table}
+
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | m{4em} | m{1.4cm}| m{1.4cm} | m{1.4cm}|} 
+			\hline
+			\textbf{Barrier Type}         & \textbf{Price Far from Barrier} & \textbf{Price Near the Barrier} & \textbf{Intuition}  \\
+			\hline
+			\textbf{Up-and-Out (Knock-Out)} & Similar to vanilla options     & $\Delta \to 0$ as $S \to B$  & Probability of knock-out increases as $S$ nears $B$. \\ 
+			\textbf{Down-and-Out (Knock-Out)} & Similar to vanilla options     & $\Delta \to 0$ as $S \to B$  & Probability of knock-out increases as $S$ nears $B$. \\ 
+			\hline
+			\textbf{Up-and-In (Knock-In)}    & $\Delta \approx 0$ far from barrier   & $\Delta \uparrow$ as $S \to B$  & Option becomes active as the price hits the barrier. \\ 
+			\hline
+			\textbf{Down-and-In (Knock-In)}  & $\Delta \approx 0$ far from barrier   & $\Delta \uparrow$ as $S \to B$  & Option becomes active as the price hits the barrier. \\ 
+			\hline
+		\end{tabular}
+		\caption{Delta behavior for different types of barrier options.}
+		\label{tab:delta_barrier_options}
+	\end{table}
+\end{center}
 
 \textbf{Key Intuition:}
 \begin{itemize}
@@ -65,7 +66,9 @@ The visual analysis in Figure~\ref{fig:delta_upout} and the insights from Table~
     \label{fig:delta_upout}
 \end{figure}
 
-\section*{2. Gamma (\(\Gamma\))}
+\subsection{Delta Hedging}
+
+\section{Gamma (\(\Gamma\))}
 
 Gamma (\(\Gamma\)) for a barrier option measures the rate of change of delta (\(\Delta\)) with respect to changes in the underlying asset price (\(S\)). It represents the curvature or sensitivity of delta in response to movements in the underlying price. It provides insights into how rapidly an option's delta will change as the underlying price fluctuates.
 \[
@@ -83,7 +86,7 @@ Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out 
     \label{fig:gamma_behavior}
 \end{figure}
 
-\section*{3. Vega (\(\nu\))}
+\section{Vega (\(\nu\))}
 
 \begin{figure}[h]
     \centering
@@ -105,7 +108,7 @@ Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out 
 The visualization shown in Figure~\ref{fig:vega_behavior} provides insights into how Vega behaves with changes in volatility across up-and-out options. The sensitivity patterns are influenced by the interplay between volatility and the probability of breaching the barrier level.
 
 
-\section*{4. Theta (\(\Theta\))}
+\section{4. Theta (\(\Theta\))}
 
 Theta (\(\Theta\)) measures the rate of change of an option's price with the passage of time, assuming all other variables remain constant. It is a critical "Greek" that reflects time decay, which is the gradual erosion of the option's value as expiration approaches. In the case of barrier options, theta is influenced not only by the time remaining but also by the interaction with the barrier level and the path dependency of the option.
 
@@ -129,7 +132,7 @@ Barrier options are unique because their payoff depends on the underlying asset 
 The visualization in Figure~\ref{fig:theta_behavior} illustrates the relationship between time to maturity and theta for an up-and-out put option. This analysis highlights how theta's sensitivity varies depending on proximity to the barrier and the remaining time in the option's life. It is critical to consider these patterns when employing barrier options in trading strategies, especially as expiration approaches.
 
 
-\section*{5. Rho (\(\rho\))}
+\section{Rho (\(\rho\))}
 
 Rho for barrier options measures the sensitivity of the option price to changes in the risk-free interest rate (\(r\)). It represents how much the value of the option changes when the risk-free rate changes by 1\%. Rho is important in understanding the impact of monetary policy, such as changes in interest rates, on the value of barrier options.
 
@@ -141,7 +144,6 @@ Rho for barrier options measures the sensitivity of the option price to changes 
     \item \textbf{Knock-In Options:} An increase in interest rates generally leads to a higher value for knock-in options. This is because higher rates make the option more attractive compared to other financial instruments by increasing the present value of the potential payoff.
     \item \textbf{Knock-Out Options:} The sensitivity of knock-out options to changes in interest rates is less pronounced compared to knock-in options, especially if the option is at a high risk of being knocked out before maturity.
 \end{itemize}
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=.65\linewidth]{content/images/rho_upout.png}

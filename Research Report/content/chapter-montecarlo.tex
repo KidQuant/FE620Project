@@ -1,38 +1,38 @@
 \chapter{Barrier Option Pricing with Monte Carlo}
+\begin{center}
+	\begin{table}[H]
+		\begin{tabular}{ | m{4em} | m{1.4cm}| m{1.4cm} | m{1.4cm}| m{1.4cm} | m{1.37cm} | m{1.4cm} | m{1.4cm} | m{1.4cm} | m{1.45cm} |} 
+			\hline
+			& Price & $\text{MC}_{100}$ & $\text{err}_{100}$ & $\text{MC}_{1000}$ & $\text{err}_{1000}$ & $\text{MC}_{5000}$ & $\text{err}_{5000}$ & $\text{MC}_{10000}$ & $\text{err}_{10000}$  \\ 
+			\hline
+			$S_0=90$ $B=120$ & 1.2925 (7.3823) & 1.8113 (8.0324)  & -0.5188 (-0.6524) & 1.4851 (7.5403) & -0.1926 (-0.1603) & 1.3249 (7.4427) & -0.0324 (-0.0627) & 1.3525 (7.3643) & -0.06 (0.0157) \\ 
+			\hline
+			$S_0=90$ $B=130$ & 2.9799 (7.5049) & 3.2746 (6.7301) & -0.2947 (0.7748) & 3.0758 (7.9160) & -0.0960 (-0.4111) &  3.0351 (7.4177) & -0.0552 (0.0872) & 2.9991 (7.4826) & -0.0192 (0.0222) \\ 
+			\hline
+			$S_0=100$ $B=120$ & 1.1789 (3.5932) & 1.5790 (4.0435) & -0.4001 (-0.4503) & 1.0808 (3.9701)  & 0.0981 (-0.3763) & 1.2127 (3.6234) & -0.0338 (-0.0302) & 1.2060 (3.5990) & -0.0271 (-0.0058) \\ 
+			\hline
+			$S_0=100$ $B=130$ & 3.5369 (3.7432) & 4.6782 (4.4019)  & -1.1413 (-0.6587) & 3.2785 (3.8816) & 0.2584 (-0.1384) & 3.4410 (3.7508) & 0.0959 (-0.0076) & 3.5303 (3.7498)  & 0.0066 (-0.0066)\\ 
+			\hline 
+			$S_0=110$ $B=120$ & 0.6264 (1.3437) & 0.7961 (1.5428) & -0.1697 (-0.1991) & 0.7819 (1.2988) & -0.1555 (0.0449) & 0.6422 (1.3553) & -0.0159 (-0.0116) & 0.6551 (1.3396) & -0.0362 (0.0041) \\
+			\hline
+			$S_0=110$ $B=130$ & 2.9014 (1.6735) & 2.4881 (1.5780)  & 0.4133 (0.0955) & 3.1815 (1.8227) & -0.2801 (-0.1492) & 2.9130 (1.7561) & -0.0116 (-0.0826) & 2.9700 (1.6167) & -0.0686 (0.0568)\\
+			\hline
+			$S_0=100$ $B=300$ & 11.1605 & 10.4632 & 0.6973 & 11.4493 & -0.2888 & 10.8657 & 0.2948 & 11.1015 & 0.0590 \\
+		\hline
+		\end{tabular}
+		\caption{MC Up-and-out call with $q=0\%,r=10\%, T=1,\sigma=20\%,K=100$}
+		\label{tab:MC_barrer}
+	\end{table}
+\end{center}
 Suppose the asset price follows a Geometric Brownian Motion (GBM):
 \begin{equation}\label{eq:GBM}
 	dS_t=rS_tdt+\sigma S_tdW_t
 \end{equation}
 Where $S_t$ is the asset price at time $t$, $r$ is the risk-free interest rate, $\sigma$ is the volatility of the asset, and $dW_t$ is the increment of a Wiener process. With this process in mind, we can discretize time by dividing the total time into smaller length intervals $\Delta t=T/N.$ Afterwards, we simulate the asset price paths by generating a random standard normal variable $Z$ and using the random variable to update the asset price with the discretized GBM.
-
-\begin{center}
-	\begin{table}[H]
-    \begin{tabular}{ | m{4em} | m{1.4cm}| m{1.4cm} | m{1.4cm}| m{1.4cm} | m{1.37cm} | m{1.4cm} | m{1.4cm} | m{1.4cm} | m{1.45cm} |} 
-  \hline
-   & Price & $\text{MC}_{100}$ & $\text{err}_{100}$ & $\text{MC}_{1000}$ & $\text{err}_{1000}$ & $\text{MC}_{5000}$ & $\text{err}_{5000}$ & $\text{MC}_{10000}$ & $\text{err}_{10000}$  \\ 
-   \hline
-   $S_0=100$ $B=0.01$ & 11.1605 & 10.4632 & 0.6973 & 11.4493 & -0.2888 & 10.8657 & 0.2948 & 11.1015 & 0.0590 \\
-  \hline
-	$S_0=90$ $B=120$ & 1.2925 (7.3823) & 1.8113 (8.0324)  & -0.5188 (-0.6524) & 1.4851 (7.5403) & -0.1926 (-0.1603) & 1.3249 (7.4427) & -0.0324 (-0.0627) & 1.3525 (7.3643) & -0.06 (0.0157) \\ 
-	\hline
-	$S_0=90$ $B=130$ & 2.9799 (7.5049) & 3.2746 (6.7301) & -0.2947 (0.7748) & 3.0758 (7.9160) & -0.0960 (-0.4111) &  3.0351 (7.4177) & -0.0552 (0.0872) & 2.9991 (7.4826) & -0.0192 (0.0222) \\ 
-  \hline
-  $S_0=100$ $B=120$ & 1.1789 (3.5932) & 1.5790 (4.0435) & -0.4001 (-0.4503) & 1.0808 (3.9701)  & 0.0981 (-0.3763) & 1.2127 (3.6234) & -0.0338 (-0.0302) & 1.2060 (3.5990) & -0.0271 (-0.0058) \\ 
-  \hline
-  $S_0=100$ $B=130$ & 3.5369 (3.7432) & 4.6782 (4.4019)  & -1.1413 (-0.6587) & 3.2785 (3.8816) & 0.2584 (-0.1384) & 3.4410 (3.7508) & 0.0959 (-0.0076) & 3.5303 (3.7498)  & 0.0066 (-0.0066)\\ 
-  \hline 
-  $S_0=110$ $B=120$ & 0.6264 (1.3437) & 0.7961 (1.5428) & -0.1697 (-0.1991) & 0.7819 (1.2988) & -0.1555 (0.0449) & 0.6422 (1.3553) & -0.0159 (-0.0116) & 0.6551 (1.3396) & -0.0362 (0.0041) \\
-  \hline
-  $S_0=110$ $B=130$ & 2.9014 (1.6735) & 2.4881 (1.5780)  & 0.4133 (0.0955) & 3.1815 (1.8227) & -0.2801 (-0.1492) & 2.9130 (1.7561) & -0.0116 (-0.0826) & 2.9700 (1.6167) & -0.0686 (0.0568)\\
-  \hline
-\end{tabular}
-\caption{MC Up-and-out call with $q=0\%,r=10\%, T=1,\sigma=20\%,K=100$}
-\label{tab:MC_barrer}
-\end{table}
-\end{center}
 \begin{equation}
 	S_{t+\Delta t}=S_t\times\exp\left(\left(r-\frac{\sigma^2}{2}\right)\Delta t+\sigma\sqrt{\Delta t}\times 2\right)
 \end{equation}
-Table (\ref{tab:MC_barrer}) shows the comparison between the Black-Scholes analytical price and the Monte Carlo simulations for the up-and-out call options. We have chosen options with different Barrier values as well as varying stock values. These results will be compared with those obtained through alternative variations of Monte Carlo methods. We've used simulations for $n=100,1000,5000,\text{ and }10000$ and samples. The errors listed in the tables represent the price deviation from the analytical values. The values in the parenthesis denote the outcome for puts, while the values without parenthesis denote the values for calls.
+Table (\ref{tab:MC_barrer}) shows the comparison between the Black-Scholes analytical price and the Monte Carlo simulations for the up-and-out call options. We have chosen options with different Barrier values as well as varying stock values.
 
-As we can see, the Monte Carlo price gets closer to the analytical solution for $n=5000$. With the table, we confirm one main aspect of Monte Carlo theory: increasing the number of simulations leads to an improved accuracy for the computation.
+
+These results will be compared with those obtained through alternative variations of Monte Carlo methods. We've used simulations for $n=100,1000,5000,\text{ and }10000$ and samples. The errors listed in the tables represent the price deviation from the analytical values. The values in the parenthesis denote the outcome for puts, while the values without parenthesis denote the values for calls. As we can see, the Monte Carlo price gets closer to the analytical solution for $n=5000$. With the table, we confirm one main aspect of Monte Carlo theory: increasing the number of simulations leads to an improved accuracy for the computation.

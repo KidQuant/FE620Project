@@ -27,9 +27,7 @@ These formulas drive our intuition of how both vanilla and exotic options can be
 \section{Barrier Option Payoffs}
 As we can see, the payoff of a vanilla option depends only on the terminal value of the underlying asset. However, an exotic option, such as a barrier option, is very different. Its price is determined by whether the underlying asset's price reaches a certain level during a specific period. Barrier options differ from standard vanilla options in several ways. 
 
-First, they match the hedging needs more closely than standard options; second, premiums for barrier options are typically lower than vanilla options; and finally, the payoff of a barrier option matches beliefs about the future behavior of the market. These features benefit many different types of investors, regardless of experience or financial needs.
-
-Another significant difference between barrier options and vanilla options is that barrier options are path-dependent. This means that the payoff depends on the process of the underlying asset. Another difference involves the possibility of a rebate. A rebate is a positive discount that a barrier option holder may receive if the barrier is never reached. For the purpose of outlining the analytical framework, we will not discuss rebates.
+First, they match the hedging needs more closely than standard options; second, premiums for barrier options are typically lower than vanilla options; and finally, the payoff of a barrier option matches beliefs about the future behavior of the market. These features benefit many different types of investors, regardless of experience or financial needs. Another significant difference between barrier options and vanilla options is that barrier options are path-dependent. This means that the payoff depends on the process of the underlying asset. Another difference involves the possibility of a rebate. A rebate is a positive discount that a barrier option holder may receive if the barrier is never reached. For the purpose of outlining the analytical framework, we will not discuss rebates.
 
 There are four different types of thresholds, or barriers, to consider which are:
 
@@ -49,7 +47,7 @@ For example, let $B$ be the barrier threshold and $S_0$ be the price of the unde
 	0 & \text{otherwise}
 	\end{cases}
 \end{equation}
-An up-and-out call option with constant barrier $B<S_0$ has a payoff if the underlying price does not go beyond the barrier value until maturity $T$:
+An up-and-out call option with constant barrier $B>S_0$ has a payoff if the underlying price does not go beyond the barrier value until maturity $T$:
 \begin{equation}
 	\begin{cases}
 		\left(S_T-K\right)^+  & \text{if }S_t<B,\forall t\in[0,T) \\
@@ -70,6 +68,4 @@ An up-and-in call option with a constant barrier $B<S_0$ has a payoff if the und
 		\left(S_T-K\right)^+ & \text{otherwise}
 	\end{cases}
 \end{equation}
-There are two main approaches to analytically evaluating the price of a barrier option: the probability method and the partial differential equation (PDE) method. The probability method involves the use of the reflection principal and the Girsanov theorem to estimate the barrier densities. The PDE approach is derived from the institution that all barrier options satisfy the Black-Scholes PDE but with different domains, expiry conditions, and boundary conditions.
-
-Merton was the first to price barrier options using the PDE method, which he used to obtain the theoretical price of a down-and-out call option by using the PDE method to obtain a theoretical price. We will demonstrate this in the next section.
+There are two main approaches to analytically evaluating the price of a barrier option: the probability method and the partial differential equation (PDE) method. The probability method involves the use of the reflection principal and the Girsanov theorem to estimate the barrier densities. The PDE approach is derived from the intutition that all barrier options satisfy the Black-Scholes PDE but with different domains, expiry conditions, and boundary conditions. Merton was the first to price barrier options using the PDE method, which he used to obtain the theoretical price of a down-and-out call option by using the PDE method to obtain a theoretical price.

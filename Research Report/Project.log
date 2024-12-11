@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  8 DEC 2024 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  10 DEC 2024 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,7 +1073,7 @@ Package hyperref Info: Link coloring ON on input line 61.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (content/titlepages.tex
-<images (2).png, id=62, 651.44789pt x 488.58592pt>
+<images (2).png, id=106, 651.44789pt x 488.58592pt>
 File: images (2).png Graphic file (type png)
 <use images (2).png>
 Package pdftex.def Info: images (2).png  used on input line 8.
@@ -1114,7 +1114,7 @@ Chapter 2.
 [5
 
 ]
-<content/images/surface.png, id=132, 1018.2843pt x 395.3169pt>
+<content/images/surface.png, id=187, 1018.2843pt x 395.3169pt>
 File: content/images/surface.png Graphic file (type png)
 <use content/images/surface.png>
 Package pdftex.def Info: content/images/surface.png  used on input line 82.
@@ -1122,284 +1122,601 @@ Package pdftex.def Info: content/images/surface.png  used on input line 82.
  [6]) (content/chapter-montecarlo.tex [7 <./content/images/surface.png>]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 1.2925
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 1.8113
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 -0.5188
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 1.4851
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 -0.1926
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 1.3249
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 -0.0324
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 []|\OT1/cmr/m/n/10 1.3525
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 []|\OT1/cmr/m/n/10 -0.06
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 2.9799
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 3.2746
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 -0.2947
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 3.0758
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 -0.0960
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 3.0351
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 -0.0552
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\OT1/cmr/m/n/10 2.9991
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 []|\OT1/cmr/m/n/10 -0.0192
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\OT1/cmr/m/n/10 1.1789
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\OT1/cmr/m/n/10 1.5790
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\OT1/cmr/m/n/10 -0.4001
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\OT1/cmr/m/n/10 1.0808
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\OT1/cmr/m/n/10 1.2127
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\OT1/cmr/m/n/10 -0.0338
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\OT1/cmr/m/n/10 1.2060
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\OT1/cmr/m/n/10 3.5369
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\OT1/cmr/m/n/10 4.6782
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\OT1/cmr/m/n/10 -1.1413
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\OT1/cmr/m/n/10 3.2785
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\OT1/cmr/m/n/10 3.4410
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\OT1/cmr/m/n/10 3.5303
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 0.6264
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 0.7961
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 -0.1697
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 0.7819
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 -0.1555
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 0.6422
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 -0.0159
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/10 0.6551
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 []|\OT1/cmr/m/n/10 -0.0362
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 2.9014
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 2.4881
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 0.4133
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 3.1815
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 -0.2801
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 2.9130
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 -0.0116
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\OT1/cmr/m/n/10 2.9700
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 []|\OT1/cmr/m/n/10 -0.0686
  []
 
 
-Overfull \hbox (53.71727pt too wide) in paragraph at lines 10--29
+Overfull \hbox (53.71727pt too wide) in paragraph at lines 4--23
  [][] 
  []
 
 [8
 
-]) (content/chapter-hedging.tex) (content/chapter-greeks.tex [9]
+]) (content/chapter-binom.tex [9]
 Chapter 4.
 [10
 
-]) (content/bibliography.tex [11]) [12
+]
+<content/images/three-step.jpg, id=225, 615.0478pt x 411.03563pt>
+File: content/images/three-step.jpg Graphic file (type jpg)
+<use content/images/three-step.jpg>
+Package pdftex.def Info: content/images/three-step.jpg  used on input line 98.
+(pdftex.def)             Requested size: 352.31625pt x 235.45303pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (content/chapter-greeks.tex [11] [12 <./content/images/three-step.jpg>]
+Chapter 5.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 22.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 22.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\OT1/cmr/bx/n/10 Barrier
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\OT1/cmr/bx/n/10 Price
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10 Far
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10 from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\OT1/cmr/bx/n/10 Price
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10 Near
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10 the
+ []
+
+
+Overfull \hbox (4.45775pt too wide) in paragraph at lines 40--41
+[]|\OT1/cmr/bx/n/10 Intuition| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\OT1/cmr/bx/n/10 Up-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10 and-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10 Out
+ []
+
+
+Overfull \hbox (0.63861pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10 (Knock-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\OT1/cmr/m/n/10 Similar
+ []
+
+
+Overfull \hbox (9.22202pt too wide) in paragraph at lines 42--43
+[]|\OT1/cmr/m/n/10 Probability
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/cmr/m/n/10 out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/cmr/m/n/10 in-creases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+\OT1/cmr/m/n/10 as $\OML/cmm/m/it/10 S$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\OT1/cmr/bx/n/10 Down-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10 and-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10 Out
+ []
+
+
+Overfull \hbox (0.63861pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10 (Knock-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\OT1/cmr/m/n/10 Similar
+ []
+
+
+Overfull \hbox (9.22202pt too wide) in paragraph at lines 43--44
+[]|\OT1/cmr/m/n/10 Probability
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\OT1/cmr/m/n/10 out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\OT1/cmr/m/n/10 in-creases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\OT1/cmr/m/n/10 as $\OML/cmm/m/it/10 S$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\OT1/cmr/bx/n/10 Up-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10 and-In
+ []
+
+
+Overfull \hbox (0.63861pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10 (Knock-
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 45--45
+[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 0$
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 45--45
+\OT1/cmr/m/n/10 far from
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 45--45
+[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 "$ \OT1/cmr/m/n/10 as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+[]|\OT1/cmr/m/n/10 Option
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+\OT1/cmr/m/n/10 be-comes
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 45--46
+\OT1/cmr/m/n/10 hits the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|\OT1/cmr/bx/n/10 Down-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10 and-In
+ []
+
+
+Overfull \hbox (0.63861pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10 (Knock-
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 47--47
+[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 0$
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 47--47
+\OT1/cmr/m/n/10 far from
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 47--47
+[]|$\OT1/cmr/m/n/10 ^^A \OMS/cmsy/m/n/10 "$ \OT1/cmr/m/n/10 as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+[]|\OT1/cmr/m/n/10 Option
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+\OT1/cmr/m/n/10 be-comes
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 47--48
+\OT1/cmr/m/n/10 hits the
+ []
+
+[13
+
+]
+<content/images/delta_upout.png, id=246, 722.7pt x 433.62pt>
+File: content/images/delta_upout.png Graphic file (type png)
+<use content/images/delta_upout.png>
+Package pdftex.def Info: content/images/delta_upout.png  used on input line 64.
+
+(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Gamma' on input line 71.
+
+[14]
+<content/images/gamma-upout.png, id=253, 722.7pt x 433.62pt>
+File: content/images/gamma-upout.png Graphic file (type png)
+<use content/images/gamma-upout.png>
+Package pdftex.def Info: content/images/gamma-upout.png  used on input line 84.
+
+(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
+ [15 <./content/images/delta_upout.png> <./content/images/gamma-upout.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\nu' on input line 89.
+
+<content/images/vega_upout.png, id=261, 722.7pt x 433.62pt>
+File: content/images/vega_upout.png Graphic file (type png)
+<use content/images/vega_upout.png>
+Package pdftex.def Info: content/images/vega_upout.png  used on input line 93.
+(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 111.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Theta' on input line 111.
+
+<content/images/theta_upout.png, id=263, 722.7pt x 433.62pt>
+File: content/images/theta_upout.png Graphic file (type png)
+<use content/images/theta_upout.png>
+Package pdftex.def Info: content/images/theta_upout.png  used on input line 119
+.
+(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16 <./content/images/vega_upout.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\rho' on input line 135.
+
+<content/images/rho_upout.png, id=272, 722.7pt x 433.62pt>
+File: content/images/rho_upout.png Graphic file (type png)
+<use content/images/rho_upout.png>
+Package pdftex.def Info: content/images/rho_upout.png  used on input line 149.
+(pdftex.def)             Requested size: 305.33789pt x 183.20425pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (content/bibliography.tex [17 <./content/images/theta_upout.png>] [18 <./cont
+ent/images/rho_upout.png>]) [19
 
 ] (content/appendix.tex
 Appendix A.
-[13
+[20
 
 
-]) [14] (Project.aux)
+]) [21] (Project.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.25pt have occurred.
 
 Package rerunfilecheck Info: File `Project.out' has not changed.
-(rerunfilecheck)             Checksum: 8E3B801D259FCE0B01C967079643B75D;2764.
+(rerunfilecheck)             Checksum: DEEFB3BA53B611802A723CF6DDCC202A;4238.
  ) 
 Here is how much of TeX's memory you used:
- 35351 strings out of 476326
- 819585 string characters out of 5787722
+ 35440 strings out of 476326
+ 821496 string characters out of 5787722
  1875660 words of memory out of 5000000
- 55151 multiletter control sequences out of 15000+600000
- 522169 words of font info for 73 fonts, out of 8000000 for 9000
+ 55209 multiletter control sequences out of 15000+600000
+ 523120 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,14n,104p,889b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,14n,104p,892b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\drebi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -1415,10 +1732,11 @@ drebi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
 cm/cmr7.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Project.pdf (15 pages, 381581 bytes).
+s/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/drebi/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Project.pdf (22 pages, 643286 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 381 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 

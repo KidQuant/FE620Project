@@ -2,7 +2,7 @@ import numpy as np
 import scipy.stats as ss
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
-from BSM_option_class import BSmodel, BarrierOption
+from BSM_option_class import BSmodel, BarrierOption, VanillaEuro
 from MC_barrier_options import MC_BarrierOption
 
 from scipy import sparse
@@ -15,16 +15,20 @@ K = 100.0  # strike
 T = 1.0  # maturity
 r = 0.1  # risk free rate
 sigma = 0.2  # diffusion coefficient or volatility
-B = 120  # Barrier 1
-sim=10000
+B = 1000  # Barrier 1
+sim=100
+call = VanillaEuro(S0, K, T, sigma,r, 0)
 
-# barrier = BarrierOption(S0, K, T, sigma, r, 0, B)
-# BSM_price = barrier.up_put('out')
+call.vanilla_european_call()
 
-BSM_price = 1.6735
+barrier = BarrierOption(S0, K, T, sigma, r, 0, B)
+BSM_price = barrier.up_call('out')
+
+
+# BSM_price = 1.6735
 print(f"Black Scholes Option Price: {BSM_price:.4f}")
 
-MC_barrier = MC_BarrierOption("put", "up_and_out", S0, K, B, T, sigma, r)
+MC_barrier = MC_BarrierOption("call", "up_and_out", S0, K, B, T, sigma, r)
 MC_price = MC_barrier.monte_carlo_pricing(sim, sim, plot=False)
 
 print(f"Monte Carlo Option Price: {MC_price:.4f}")
