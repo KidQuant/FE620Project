@@ -34,7 +34,7 @@ and $d^\prime_1/d^\prime_2$ is derived by the following
 	d^\prime_1=\frac{\ln\left(\frac{B^2}{SK}\right)+(r-q+\tfrac{1}{2}\sigma^2)\tau}{\sigma\sqrt{T}},\quad d^\prime_2=d^\prime_1-\sigma\sqrt{\tau}
 \end{equation}
 If $S\geq B$ at any time before expiration, the up-and-out call ceases to exist (it is knocked out). If $S<B$ for the entire option's life, the payoff at maturity is just like a standard call, where the payoff is $\max\left(S_T-K, 0\right)$
-\section{Barrier Call/Put Parity}
+\section{In-Out Parity}
 
 An interesting consequence from the analytical solution to barrier options is the relationship between knock-in and knock-out barrier options. As such, in the same way there is a parity relationship between vanilla puts and calls, there is a parity relationship between knock-out calls/puts and knock-in calls/puts. We refer to this relationship as the up-out/up-in call/put parity. For this example, we will refer to the up-in and up-out call option.
 
@@ -43,9 +43,10 @@ The parity between the up-in and up-out call option demonstrates that the price 
 \begin{equation}
 	C_{\text{vanilla}}=C_{\text{up-in}}+C_{\text{up-out}}
 \end{equation}
+
 This parity holds under the assumption that no dividends are paid, and other assumptions like interest rates are constant. This relationship works because the vanilla call represents a basic option that can be exercised at any point before expiration. The up-and-out call option represents the vanilla call option with a barrier that expires worthless if the underlying asset breaks the barrier. The up-and-in call represents the same option but with a delayed start; only becoming active if the price breaks the barrier.
 
-Since the up-and-in option only activates once the barrier is breached, it's value is lower than the vanilla call option. Using this intutition, we can adjust the up-and-out call value based on the price moving above the barrier. This intutition works for down-in/down-out, as well as puts. As such, we can always find the value of one of the options as long as we know the value of the vanilla option and it's payoff pair (up/down and in/out).
+Since the up-and-in option only activates once the barrier is breached, it's value is lower than the vanilla call option. Using this intuition, we can adjust the up-and-out call value based on the price moving above the barrier. This intuition works for down-in/down-out, as well as puts. As such, we can always find the value of one of the options as long as we know the value of the vanilla option and it's payoff pair (up/down and in/out).
 
 \section{Barrier Option Payoffs}
 
