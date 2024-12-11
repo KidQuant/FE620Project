@@ -5,8 +5,9 @@
 \contentsline {chapter}{\numberline {2}Analytical Solutions for Barrier Options}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}The Black-Scholes Model}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Analytical Solution to Barrier Options}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Barrier Option Payoffs}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Surface of the Barrier Option}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.3}Barrier Call/Put Parity}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Barrier Option Payoffs}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Surface of the Barrier Option}{7}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Barrier Option Pricing with Monte Carlo}{8}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Binomial Tree Method}{10}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Binomial Tree Structure}{10}{section.4.1}%
