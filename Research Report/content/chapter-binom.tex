@@ -71,11 +71,11 @@ Let's consider an up-and-out European style put option with these parameters:
 \section{Tree Construction and Results}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.75\linewidth]{content/images/three-step.jpg}
-    \caption{Binomial Tree with Barrier Level \(B = 90\) and Strike Price \(K = 105\).}
+    \includegraphics[width=.75\linewidth]{content/images/three-step.png}
+    \caption{Binomial Tree with Barrier Level \(B = 120\) and Strike Price \(K = S_0\).}
     \label{fig:binomial-tree}
 \end{figure}
-Figure \ref{fig:binomial-tree} illustrates the binomial tree for the given parameters, showing the possible stock price movements and the resulting option values at each node. The calculated option price, considering the up-and-out barrier condition, is obtained through backward induction along the tree. This ensures that the barrier condition is applied at each step. The final option price using this method is 6.17. For reference, the actual option price using the analytical solution is 5.36.
+Figure \ref{fig:binomial-tree} illustrates the binomial tree for the given parameters, showing the possible stock price movements and the resulting option values at each node. The calculated option price, considering the up-and-out barrier condition, is obtained through backward induction along the tree. This ensures that the barrier condition is applied at each step. The final option price using this method is 6.17. For reference, the actual option price using the analytical formula is 5.36.
 
 \begin{figure}[h]
     \centering
