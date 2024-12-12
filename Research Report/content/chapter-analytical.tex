@@ -43,7 +43,6 @@ The parity between the up-in and up-out call option demonstrates that the price 
 \begin{equation}
 	C_{\text{vanilla}}=C_{\text{up-in}}+C_{\text{up-out}}
 \end{equation}
-
 This parity holds under the assumption that no dividends are paid, and other assumptions like interest rates are constant. This relationship works because the vanilla call represents a basic option that can be exercised at any point before expiration. The up-and-out call option represents the vanilla call option with a barrier that expires worthless if the underlying asset breaks the barrier. The up-and-in call represents the same option but with a delayed start; only becoming active if the price breaks the barrier.
 
 Since the up-and-in option only activates once the barrier is breached, it's value is lower than the vanilla call option. Using this intuition, we can adjust the up-and-out call value based on the price moving above the barrier. This intuition works for down-in/down-out, as well as puts. As such, we can always find the value of one of the options as long as we know the value of the vanilla option and it's payoff pair (up/down and in/out).

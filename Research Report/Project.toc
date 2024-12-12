@@ -1,25 +1,32 @@
-\contentsline {chapter}{\numberline {1}Barrier Options}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Background}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Options Payoffs}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Barrier Option Payoffs}{3}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Analytical Solutions for Barrier Options}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}The Black-Scholes Model}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Analytical Solution to Barrier Options}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}In-Out Parity}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Barrier Option Payoffs}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Surface of the Barrier Option}{7}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Barrier Option Pricing with Monte Carlo}{8}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Binomial Tree Method}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Binomial Tree Structure}{10}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Example Calculation}{11}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Tree Construction and Results}{11}{section.4.3}%
-\contentsline {chapter}{\numberline {5}The Greeks for Barrier Options}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Delta (\(\Delta \))}{13}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Delta Hedging}{14}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Gamma (\(\Gamma \))}{15}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Vega ($nu$)}{16}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Theta ($Theta$)}{17}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Rho ($\rho $)}{18}{section.5.5}%
-\contentsline {chapter}{\numberline {A}Formulas and Proofs}{21}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Black-Scholes PDE for Barrier Options}{21}{section.1.A.1}%
-\contentsline {section}{\numberline {A.2}Payoffs Formulas for Single Barrier Options}{22}{section.1.A.2}%
+\contentsline {chapter}{\numberline {1}Barrier Options}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Options Payoffs}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Barrier Option Payoffs}{4}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Analytical Solutions for Barrier Options}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Black-Scholes Model}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Analytical Solution to Barrier Options}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}In-Out Parity}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Barrier Option Payoffs}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Surface of the Barrier Option}{8}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Barrier Option Pricing with Monte Carlo}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Binomial Tree Method}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Binomial Tree Structure}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Example Calculation}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Tree Construction and Results}{12}{section.4.3}%
+\contentsline {chapter}{\numberline {5}The Greeks for Barrier Options}{14}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Delta (\(\Delta \))}{14}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Delta Hedging}{15}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Gamma (\(\Gamma \))}{16}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Vega ($nu$)}{17}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Theta ($Theta$)}{18}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Rho ($\rho $)}{19}{section.5.5}%
+\contentsline {chapter}{\numberline {6}The Greeks for Barrier Options}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Delta (\(\Delta \))}{21}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Delta Hedging}{22}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Gamma (\(\Gamma \))}{23}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Vega (\(\nu \))}{24}{section.6.3}%
+\contentsline {section}{\numberline {6.4}4. Theta (\(\Theta \))}{25}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Rho (\(\rho \))}{26}{section.6.5}%
+\contentsline {chapter}{\numberline {A}Formulas and Proofs}{29}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Black-Scholes PDE for Barrier Options}{29}{section.1.A.1}%
+\contentsline {section}{\numberline {A.2}Payoffs Formulas for Single Barrier Options}{30}{section.1.A.2}%
