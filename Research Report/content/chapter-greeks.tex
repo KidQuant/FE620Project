@@ -43,10 +43,10 @@ To further analyze the delta across different barrier options, refer to the tabl
 
 The visual analysis in Figure~\ref{fig:delta_upout} shows delta behavior for an up and out put option. The insights from the plot matches the intuition from Table~\ref{tab:delta_barrier_options} which provides a comprehensive understanding of how delta behaves across different types of barrier options. Before the stock price hits the barrier, the delta is similar to one of a vanilla option. As the stock price hits the barrier, there is a steep decline in delta as the option is knocked out and the option price is zero.
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=.65\linewidth]{content/images/delta_upout.png}
-	\caption{Delta of up-and-out Put Option vs. the Stock Price.}
-	\label{fig:delta_upout}
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/delta.png}
+    \caption{Delta of up-and-out Put Option vs. the Stock Price.}
+    \label{fig:delta_upout}
 \end{figure}
 
 \subsection{Delta Hedging}
@@ -54,31 +54,31 @@ The visual analysis in Figure~\ref{fig:delta_upout} shows delta behavior for an 
 In this section, we retrieve NVDA prices from October 21--25, 2024, using the parameters \( K = 143 \), \( T = 1 \), \( r = 0.046 \), \( \sigma = 0.5 \), and \( B = 150 \), which represent the strike price, time to maturity, risk-free rate, volatility, and barrier level, respectively. We calculated the option price and its delta. The unhedged and hedged changes are presented in Table~\ref{tab:hedging}, demonstrating the effectiveness of delta hedging in minimizing investment risks. Figure~\ref{fig:hedgingvunhedging} provides a visual comparison of hedged versus unhedged changes from October 22 to 24, 2024. The figure illustrates that hedging reduces risk by minimizing the volatility of the option price.
 
 \begin{table}[h]
-	\centering
-	\caption{Option Pricing and Delta Hedging}
-	\label{tab:hedging}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		\textbf{Date} & \textbf{Stock Price} & \textbf{Option Price} & \textbf{Delta} & \textbf{Unhedged Change} & \textbf{Hedged Change} \\
-		\hline
-		October 21 & 143.71 & 24.23653 & -0.3624546 & NA & NA \\
-		\hline
-		October 22 & 143.59 & 24.28006 & -0.3630813 & 0.04353214 & $3.759243 \times 10^{-5}$ \\
-		\hline
-		October 23 & 139.56 & 25.78639 & -0.3846464 & 1.50633247 & $4.311500 \times 10^{-2}$ \\
-		\hline
-		October 24 & 140.41 & 25.46142 & -0.3800139 & -0.32497748 & $1.971995 \times 10^{-3}$ \\
-		\hline
-		October 25 & 141.54 & 25.03545 & -0.3739251 & -0.42596805 & $3.447701 \times 10^{-3}$ \\
-		\hline
-	\end{tabular}
+    \centering
+    \caption{Option Pricing and Delta Hedging}
+    \label{tab:hedging}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \textbf{Date} & \textbf{Stock Price} & \textbf{Option Price} & \textbf{Delta} & \textbf{Unhedged Change} & \textbf{Hedged Change} \\
+        \hline
+        October 21 & 143.71 & 24.23653 & -0.3624546 & NA & NA \\
+        \hline
+        October 22 & 143.59 & 24.28006 & -0.3630813 & 0.04353214 & $3.759243 \times 10^{-5}$ \\
+        \hline
+        October 23 & 139.56 & 25.78639 & -0.3846464 & 1.50633247 & $4.311500 \times 10^{-2}$ \\
+        \hline
+        October 24 & 140.41 & 25.46142 & -0.3800139 & -0.32497748 & $1.971995 \times 10^{-3}$ \\
+        \hline
+        October 25 & 141.54 & 25.03545 & -0.3739251 & -0.42596805 & $3.447701 \times 10^{-3}$ \\
+        \hline
+    \end{tabular}
 \end{table}
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.65\linewidth]{content/images/hedgedvsunhedged.png}
-	\caption{Comparison of change in Option Price of a hedged investment vs unhedged investment}
-	\label{fig:hedgingvunhedging}
+    \centering
+    \includegraphics[width=0.65\linewidth]{content/images/hedgedvsunhedged.png}
+    \caption{Comparison of change in Option Price of a hedged investment vs unhedged investment}
+    \label{fig:hedgingvunhedging}
 \end{figure}
 
 \section{Gamma (\(\Gamma\))}
@@ -109,11 +109,27 @@ For \textbf{knock-in} and \textbf{knock-out} barrier options, gamma exhibits uni
 Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out put option as a function of the underlying stock price (\(S\)). As soon as the barrier is hit, the option is knocked out and gamma goes to zero. Gamma hedging is a risk management strategy used in options trading to mitigate the risks associated with large movements in the underlying asset's price. These large movements may cause large losses in delta hedged portfolio. Figure \ref{fig:compare_deltagamma_hedge} shows that hedging both delta and gamma provides minimum risk investment.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=.65\linewidth]{content/images/gamma-upout.png}
-	\caption{Gamma of an up-and-out put option vs. the Stock Price.}
-	\label{fig:gamma_behavior}
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/gamma.png}
+    \caption{Gamma of an up-and-out put option vs. the Stock Price.}
+    \label{fig:gamma_behavior}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/compare_hedging.png}
+    \caption{Comparing different hedging results}
+    \label{fig:compare_deltagamma_hedge}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/compare_hedging.png}
+    \caption{Comparing different hedging results}
+    \label{fig:compare_deltagamma_hedge}
+\end{figure}
+
 
 \begin{figure}[h]
 	\centering
@@ -136,10 +152,10 @@ Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out 
 \end{itemize}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=.65\linewidth]{content/images/vega_upout.png}
-	\caption{Vega vs Stock Price of an Up-and-Out Put Option}
-	\label{fig:vega_behavior}
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/vega_upout.png}
+    \caption{Vega vs Stock Price of an Up-and-Out Put Option}
+    \label{fig:vega_behavior}
 \end{figure}
 
 The visualization shown in Figure~\ref{fig:vega_behavior} provides insights into how Vega behaves with changes in stock price across up-and-out put option. The sensitivity patterns are influenced by the interplay between volatility and the probability of breaching the barrier level. As the barrier is breached, vega immediately goes to zero.
@@ -151,24 +167,24 @@ Theta (\(\Theta\)) measures the rate of change of an option's price with the pas
 Barrier options are unique because their payoff depends on the underlying asset price crossing (or not crossing) a specified barrier level during the option's lifetime. As such, the sensitivity of theta changes depending on proximity to the barrier, time remaining until maturity, and whether the option is near the knock-in or knock-out condition.
 
 \begin{itemize}
-	\item \textbf{Knock-In Options:} As time to maturity decreases, the value of knock-in options tends to decline, especially when the underlying asset price is far from the barrier. This is because the likelihood of triggering the option by crossing the barrier becomes lower as time runs out.
-	
-	\item \textbf{Knock-Out Options:} As time to maturity approaches, the risk of the underlying price reaching the barrier and knocking out the option increases, thereby accelerating time decay.
+    \item \textbf{Knock-In Options:} As time to maturity decreases, the value of knock-in options tends to decline, especially when the underlying asset price is far from the barrier. This is because the likelihood of triggering the option by crossing the barrier becomes lower as time runs out.
+    
+    \item \textbf{Knock-Out Options:} As time to maturity approaches, the risk of the underlying price reaching the barrier and knocking out the option increases, thereby accelerating time decay.
 \end{itemize}
 
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=.65\linewidth]{content/images/theta_upout.png}
-	\caption{Theta vs Stock Price of an Up-and-Out Put Option}
-	\label{fig:theta_behavior}
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/theta.png}
+    \caption{Theta vs Stock Price of an Up-and-Out Put Option}
+    \label{fig:theta_behavior}
 \end{figure}
 
 
 The visualization in Figure~\ref{fig:theta_behavior} illustrates the relationship between stock price and theta for an up-and-out put option. This analysis highlights how theta's sensitivity varies depending on proximity to the barrier. As the stock price approaches the strike, theta is decreasing. As the stock price approaches the barrier, it is increasing. However, when stock price hits the barrier, theta immediately goes to zero.
 
 
-\section{Rho ($\rho$)}
+\section{Rho (\(\rho\))}
 
 Rho for barrier options measures the sensitivity of the option price to changes in the risk-free interest rate (\(r\)). It represents how much the value of the option changes when the risk-free rate changes by 1\%. Rho is important in understanding the impact of monetary policy, such as changes in interest rates, on the value of barrier options.
 
@@ -182,10 +198,10 @@ When interest rates rise:
 	\item \textbf{Knock-Out Options:} Tend to show muted sensitivity to changes in the interest rate. This is because the likelihood of being knocked out (and thus losing value) dominates any benefit gained from higher interest rates.
 \end{itemize}
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=.65\linewidth]{content/images/rho_upout.png}
-	\caption{Rho vs Stock Price for an Up-and-Out Put Option}
-	\label{fig:rho_behavior}
+    \centering
+    \includegraphics[width=.65\linewidth]{content/images/rho.png}
+    \caption{Rho vs Stock Price for an Up-and-Out Put Option}
+    \label{fig:rho_behavior}
 \end{figure}
 
 The visual behavior in Figure~\ref{fig:rho_behavior} illustrates how changes in the stock price (\(r\)) impact rho of an up-and-out barrier option. As the stock price increase, rho also increases. However, as stock price breaches the barrier, rho goes to zero.
