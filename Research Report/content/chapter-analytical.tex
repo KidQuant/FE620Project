@@ -2,15 +2,15 @@
 %
 \chapter{Analytical Solutions for Barrier Options}
 
-There are closed-form solutions for pricing European-style barrier options. This means we have an explicit mathematical expression that can be used to compute the value of a function without the need for numerical solutions. However, we will continue to compare closed-form solutions to more rigorous methodologies. Unlike their continuous counterparts, no closed-form solutions exist for discrete-time barrier options (even numerical pricing is a challenge). For this reason, we will only focus on continuous-time, single-barrier options.
+There are closed-form solutions for pricing European-style barrier options. This means we have an explicit mathematical expression that can be used to compute the value of a function without the need for numerical solutions. However, we will continue to compare closed-form solutions to more rigorous methodologies, such as Monte Carlo, and Lattice (Binomal Trees). Unlike their continuous counterparts, no closed-form solutions exist for discrete-time barrier options (even numerical pricing is a challenge). For this reason, we will only focus on continuous-time, single-barrier options. All of the options that we analyze will be European options unless stated otherwise.
 
 \section{The Black-Scholes Model}
 
 The Black and Scholes model was first published in 1973, named after the two economist who helped to develop it: Fischer Black and Myrion Scholes. (the model is formally known as the Black-Scholes-Merton model) A rigorous derivation of the Wiener process, Ito's lemma, the portfolio process at the risk-free rate gives us the following equation
-\begin{equation}\label{eq:BSM}
+\begin{equation}\label{eq:Ito}
 	\frac{1}{2}\sigma^2S^2\frac{\partial^2 f}{\partial S^2}+rS\frac{\partial f}{\partial S}-\frac{\partial f}{\partial }-rf=0
 \end{equation}
-From here, we solve equation (\ref{eq:BSM}) to arrive at the following equation
+From here, we solve equation (\ref{eq:Ito}) to arrive at the following equation
 \begin{equation}\label{eq:bs_call_option}
 	f(S,t)=Se^{-qT}N(d_1)-Ke^{-rT}N(d_2)
 \end{equation}
@@ -21,8 +21,8 @@ where $S$ is the stock price, $K$ is the strike price, $r$ is the risk-free rate
 A more rigourous proof for the solution to the Black-Scholes PDE can be found on \ref{section:A1} of the appendix.
 \section{Analytical Solution to Barrier Options}
 
-We start by changing the value of $T$ for $\tau=T-t$. From there, in order to have the PDE solutioni for the up-and-out call option, we begin to alter equation (\ref{eq:bs_call_option}). Let $H$ be the barrier price. Then when $B\geq K$, we have:
-\begin{equation}\label{eq:DOC}
+Using the example of an up-and-out call barrier option, we start by changing the value of $T$ for $\tau=T-t$. From there, in order to have the PDE solutioni for the up-and-out call option, we begin to alter equation (\ref{eq:bs_call_option}). Let $H$ be the barrier price. Then when $B\geq K$, we have:
+\begin{equation}\label{eq:UOC}
 	C_{\text{up-out}}(S,t)=Se^{-q\tau}\left(N(d_1)-\left(\frac{B}{S}\right)^{2\lambda}N(d^\prime_1)\right)-Ke^{-r\tau}\left(N(d_2)-\left(\frac{B}{S}\right)^{2\lambda-2} N(d^\prime_2)\right)
 \end{equation}
 where
@@ -40,12 +40,48 @@ An interesting consequence from the analytical solution to barrier options is th
 
 The parity between the up-in and up-out call option demonstrates that the price of an up-and-in call option can be expressed by the following:
 
-\begin{equation}
-	C_{\text{vanilla}}=C_{\text{up-in}}+C_{\text{up-out}}
+\begin{equation}\label{eq:parity}
+	C_{\text{BSM}}=C_{\text{up-in}}+C_{\text{up-out}}
 \end{equation}
-This parity holds under the assumption that no dividends are paid, and other assumptions like interest rates are constant. This relationship works because the vanilla call represents a basic option that can be exercised at any point before expiration. The up-and-out call option represents the vanilla call option with a barrier that expires worthless if the underlying asset breaks the barrier. The up-and-in call represents the same option but with a delayed start; only becoming active if the price breaks the barrier.
+
+For example, consider a call option with $S=100, K=105, r=10\%, \sigma=20\%, \text{ and } T=1.$ Also, consider a barrier call option with all of the same parameters, except with a barrier level, $B=120$. Using equations (\ref{eq:bs_call_option}), (\ref{eq:UOC}), and (\ref{eq:parity})  we have the following parity:
+
+\[
+\begin{aligned}
+	C_{\text{BSM}}&=C_{\text{up-in}}+C_{\text{up-out}}\\
+				  10.521&=C_{\text{up-in}}+0.52\\
+				  9.99&=C_{\text{up-in}}\\
+\end{aligned}	
+\]
+ 
+This parity holds under the assumption that no dividends are paid, and other assumptions like interest rates are constant. This relationship works because the call options under the Black-Scholes formula represents a basic option that can be exercised at any point before expiration. The up-and-out call option represents the vanilla call option with a barrier that expires worthless if the underlying asset breaks the barrier. The up-and-in call represents the same option but with a delayed start; only becoming active if the price breaks the barrier.
 
 Since the up-and-in option only activates once the barrier is breached, it's value is lower than the vanilla call option. Using this intuition, we can adjust the up-and-out call value based on the price moving above the barrier. This intuition works for down-in/down-out, as well as puts. As such, we can always find the value of one of the options as long as we know the value of the vanilla option and it's payoff pair (up/down and in/out).
+
+\section{Surface of the Barrier Option}
+\subsubsection{Barrier Pricing for At-The-Money Options}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.90\linewidth]{content/images/surface.png}
+	\caption{At-the-money up-and-out barrier option}
+	\label{fig:surface}
+\end{figure}
+
+Figure (\ref{fig:surface}) shows the barrier curve and surface for an at-the-money up-and-out barrier option for $S=100,K=100, T=1, r=10\%,\sigma=20\%, \text{ and }B=120$. The left plot shows the value of an up-and-out barrier option (y-axis) in relation to the underlying (x-axis). The right plot shows a 3-dimensional graphical representation of the valuation of the option (z-axis) in relation to the underlying (x-axis) and time (y-axis). The plot on the left assumes the option is at expiration.
+
+As we can see, the option has no value at any price below 100, as the strike price is also 100. However, the call will retain some value, as the option has not reached the barrier of 120. Where the payoff line (blue) and the barrier curve (red) intersects shows the potential payoff at expiration, which is 1.18 according to Black-Scholes. The surface shows the option value in relation to time and the underlying price. As we can see, the barrier option has the most value when the option is very close to expiration and the stock price is relatively close to the barrier. Otherwise, the option has no value when the underlying is at 40 and the time to expiration is 0. The option also loses it's value when the option is close to the barrier.
+
+\subsubsection{Relationship With Black-Scholes}
+Figure (\ref{fig:bs_surfrace}) shows the same surface plot as Figure (\ref{fig:bs_surfrace}), except with one small alteration: we've increased the barrier to an arbitrarily high level of 250. An interesting consequence of having a barrier level that is too far away from the underlying is that the barrier option price will mirror the Black-Scholes price. This relationship holds for barrier options where $B<S$ (down-and-out, down-and-in), as well as barrier options where $B>S$ (up-and-out, up-and-in).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.40\linewidth]{content/images/bs_surface.png}
+	\caption{At-the-money up-and-out barrier option}
+	\label{fig:bs_surfrace}
+\end{figure}
+Recall that this surface still reflects an at-the-money call option, with $S=100,K=100, T=1, r=10\%,\sigma=20\%, \text{ and }B=120$. When $S$ is far away from $K$, we see that the option has almost no value (approximately 0.01) when $T=1;$, but loses all of its value for any $T<1$. Once the underlying reaches the strike price, the option will reflect the price of the Black-Scholes, which is $13.27$. Of course, the option loses all of its value once it reaches the barrier threshold of 250.
 
 \section{Barrier Option Payoffs}
 
@@ -58,9 +94,9 @@ With eight different types of single barrier options comes eight possible payoff
 		Down/Up & In/Out & Call/Put & Payoff ($K\leq B$) & Payoff ($K\geq B$)  \\
 		\hline
 		Down   & In     & Call      & $A_1-A_2+A_4+A_5$     & $A_3+A_5$   \\
-		 \hline
+		\hline
 		Up   & In     & Call      & $A_2-A_2+A_4+A_5$     & $A_1+A_5$   \\
-		 \hline
+		\hline
 		Down   & In     & Put    &  $A_1+A_5$  & $A_2-A_3+A_4+A_5$   \\
 		\hline
 		Up   & In     & Put    &  $A_3+A_5$  & $A_1-A_2+A_4+A_5$  \\
@@ -78,16 +114,3 @@ With eight different types of single barrier options comes eight possible payoff
 	\caption{Theoretical Values of Single Barrier Options}
 \end{table}
 Throughout this report, we will be deriving our analysis from the up-and-out call and put option, since it is easier to intuitively understand. The payoffs from equations (\ref{eq:vanilla_call}) and (\ref{eq:vanilla_put}), still hold for vanilla calls and puts. However, recall for a knocked-out up option, the option losses value once it has reaches the barrier above the underlying stock price.
-
-\section{Surface of the Barrier Option}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=.90\linewidth]{content/images/surface.png}
-	\caption{At-the-money up-and-out barrier option}
-	\label{fig:surface}
-\end{figure}
-
-Figure (\ref{fig:surface}) shows the barrier curve and surface for an at-the-money up-and-out barrier option for $S=100,K=100, T=1, r=10\%,\sigma=20\%, \text{ and }B=120$. The curve assumes the option is close to or at expiration date. As we can see, the option has no value at any price below 100, as the strike price is also 100. However, the call will retain some value, as the option has not reached the barrier of 120. Where the payoff line (blue) and the barrier curve (red) intersects shows the potential payoff at expiration, which is 1.18 according to Black-Scholes.
-
-The surface shows the option value in relation to time and the underlying price. As we can see, the barrier option has the most value when the option is very close to expiration and the stock price is relatively close to the barrier. Otherwise, the option has no value when the underlying is at 40 and the time to expiration is 0. The option also loses it's value when the option is close to the barrier.

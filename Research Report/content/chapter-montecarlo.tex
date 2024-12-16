@@ -16,6 +16,8 @@
 			$S_0=110$ $B=120$ & 0.6264 (1.3437) & 0.7961 (1.5428) & -0.1697 (-0.1991) & 0.7819 (1.2988) & -0.1555 (0.0449) & 0.6422 (1.3553) & -0.0159 (-0.0116) & 0.6551 (1.3396) & -0.0362 (0.0041) \\
 			\hline
 			$S_0=110$ $B=130$ & 2.9014 (1.6735) & 2.4881 (1.5780)  & 0.4133 (0.0955) & 3.1815 (1.8227) & -0.2801 (-0.1492) & 2.9130 (1.7561) & -0.0116 (-0.0826) & 2.9700 (1.6167) & -0.0686 (0.0568)\\
+			\hline
+			$S_0=110$ $B=250$ & 13.2660 (3.7534) & 13.4717 (4.6529)  & -0.2057 (-0.8995) & 13.0827 (4.2545) & 0.1833 (-0.5011) & 13.1939 (3.5797) & 0.0721 (0.1737) & 13.2129 (3.7706) & 0.0531 (-0.0172)\\
 		\hline
 		\end{tabular}
 		\caption{MC Up-and-out call with $q=0\%,r=10\%, T=1,\sigma=20\%,K=100$}
@@ -32,4 +34,6 @@ Where $S_t$ is the asset price at time $t$, $r$ is the risk-free interest rate, 
 \end{equation}
 Table (\ref{tab:MC_barrer}) shows the comparison between the Black-Scholes analytical price and the Monte Carlo simulations for the up-and-out call options. We have chosen options with different Barrier values as well as varying stock values.
 
-These results will be compared with those obtained through alternative variations of Monte Carlo methods. We've used simulations for $n=100,1000,5000,\text{ and }10000$ and samples. The errors listed in the tables represent the price deviation from the analytical values. The values in the parenthesis denote the outcome for puts, while the values without parenthesis denote the values for calls. As we can see, the Monte Carlo price gets closer to the analytical solution for $n=5000$. With the table, we confirm one main aspect of Monte Carlo theory: increasing the number of simulations leads to an improved accuracy for the computation.
+These results will be compared with those obtained through alternative variations of Monte Carlo methods. We've used simulations for $n=100,1000,5000,\text{ and }10000$ and samples. The errors listed in the tables represent the price deviation from the analytical values. The values in the parenthesis denote the outcome for puts, while the values without parenthesis denote the values for calls. As we can see, the Monte Carlo price gets closer to the analytical solution for $n=5000$. With the table, we confirm one main aspect of Monte Carlo theory: increasing the number of simulations leads to an improved accuracy for the computation. 
+
+We have also used a simulation with an arbitrarily high barrier of 250 and the results simulate what we can expect from the Monte Carlo method, as well as the analytical method. When the barrier is very far away from the underlying price, the option value will mirror the Black-Scholes price.

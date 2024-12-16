@@ -9,7 +9,7 @@ As financial markets continued to evolve in the 1990s, barrier options became mo
 \section{Options Payoffs}
 For some background, we will briefly discuss the attributes of a vanilla option. A call option gives the holder the right, but not the obligation, to buy a particular number of the underlying assets in the future for a pre-agreed price known as the strike price (put options give the holder the right, but not the obligation, to sell). While European options can only be exercised on the expiration date, American options allow the holder to exercise at any time on or before the expiration date. We will focus on European options throughout this research report.
 
-Let $S$ be the price of an underlying asset and $K$ be the strike price, where $S,K\in\amsbb{R}^+$. Then the payoff for a vanilla call option,$V_c$, is given by the following
+Let $S$ be the price of an underlying asset and $K$ be the strike price, where $S,K\in\amsbb{R}^+$. Then the payoff for a vanilla call option, $V_c$, is given by the following
 \begin{equation}\label{eq:vanilla_call}
 	V_c(S,T)=\begin{cases}
 		S_T-K  & \text{if }S_t>K,\forall t\in[0,T) \\

@@ -10,14 +10,12 @@ For the plots in this section, the parameters are \( S_0 = 40 \), \( K = 50 \), 
 
 \section{Delta (\(\Delta\))}
 
-Delta for a barrier option measures the sensitivity of the option price to changes in the underlying asset price (\(S\)). It represents the rate of change of the option's price with respect to small changes in the underlying price.
+Delta for a barrier option measures the sensitivity of the option price to changes in the underlying asset price $S$. It represents the rate of change of the option's price with respect to small changes in the underlying price.
 \[
-\Delta = \frac{\partial \text{Option Price}}{\partial S}
+\Delta = \frac{\partial V}{\partial S}
 \]
 
-For \textbf{knock-in} barrier options, delta behaves similarly to that of a standard European option but is influenced by the presence of the barrier. It reflects how changes in the underlying price affect the probability of the barrier being breached and the option becoming active.
-
-Figure~\ref{fig:delta_upout} shows the delta behavior of an up-and-out put option as a function of the underlying stock price (\(S\)). When the stock price is well below the barrier level (\(B\)), delta behaves similarly to a vanilla European put option. As the price approaches the barrier, delta tends toward zero because the likelihood of the option being knocked out increases, reducing its sensitivity.
+For \textbf{knock-in} barrier options, delta behaves similarly to that of a standard European option but is influenced by the presence of the barrier. It reflects how changes in the underlying price affect the probability of the barrier being breached and the option becoming active. Figure (\ref{fig:delta_upout}) shows the delta behavior of an up-and-out put option as a function of the underlying stock price, $S$. When the stock price is well below the barrier level $B$, delta behaves similarly to a vanilla European put option. As the price approaches the barrier, delta tends toward zero because the likelihood of the option being knocked out increases, reducing its sensitivity.
 
 To further analyze the delta across different barrier options, refer to the table below:
 \begin{center}
@@ -41,7 +39,7 @@ To further analyze the delta across different barrier options, refer to the tabl
 	\item \textbf{Knock-In Options:} Show increasing sensitivity as the underlying price nears the barrier because the probability of activation rises.
 \end{itemize}
 
-The visual analysis in Figure~\ref{fig:delta_upout} shows delta behavior for an up and out put option. The insights from the plot matches the intuition from Table~\ref{tab:delta_barrier_options} which provides a comprehensive understanding of how delta behaves across different types of barrier options. Before the stock price hits the barrier, the delta is similar to one of a vanilla option. As the stock price hits the barrier, there is a steep decline in delta as the option is knocked out and the option price is zero.
+The visual analysis in Figure (\ref{fig:delta_upout}) shows delta behavior for an up and out put option. The insights from the plot matches the intuition from Table (\ref{tab:delta_barrier_options}) which provides a comprehensive understanding of how delta behaves across different types of barrier options. Before the stock price hits the barrier, the delta is similar to one of a vanilla option. As the stock price hits the barrier, there is a steep decline in delta as the option is knocked out and the option price is zero.
 \begin{figure}[H]
     \centering
     \includegraphics[width=.65\linewidth]{content/images/delta.png}
@@ -51,7 +49,7 @@ The visual analysis in Figure~\ref{fig:delta_upout} shows delta behavior for an 
 
 \subsection{Delta Hedging}
 
-In this section, we retrieve NVDA prices from October 21--25, 2024, using the parameters \( K = 143 \), \( T = 1 \), \( r = 0.046 \), \( \sigma = 0.5 \), and \( B = 150 \), which represent the strike price, time to maturity, risk-free rate, volatility, and barrier level, respectively. We calculated the option price and its delta. The unhedged and hedged changes are presented in Table~\ref{tab:hedging}, demonstrating the effectiveness of delta hedging in minimizing investment risks. Figure~\ref{fig:hedgingvunhedging} provides a visual comparison of hedged versus unhedged changes from October 22 to 24, 2024. The figure illustrates that hedging reduces risk by minimizing the volatility of the option price.
+In this section, we retrieve NVDA prices from October 21--25, 2024, using the parameters \( K = 143 \), \( T = 1 \), \( r = 0.046 \), \( \sigma = 0.5 \), and \( B = 150 \), which represent the strike price, time to maturity, risk-free rate, volatility, and barrier level, respectively. We calculated the option price and its delta. The unhedged and hedged changes are presented in Table (\ref{tab:hedging}), demonstrating the effectiveness of delta hedging in minimizing investment risks. Figure (\ref{fig:hedgingvunhedging}) provides a visual comparison of hedged versus unhedged changes from October 22 to 24, 2024; illustrating that hedging reduces risk by minimizing the volatility of the option price.
 
 \begin{table}[h]
     \centering
@@ -85,7 +83,7 @@ In this section, we retrieve NVDA prices from October 21--25, 2024, using the pa
 
 Gamma (\(\Gamma\)) for a barrier option measures the rate of change of delta (\(\Delta\)) with respect to changes in the underlying asset price (\(S\)). It represents the curvature or sensitivity of delta in response to movements in the underlying price. It provides insights into how rapidly an option's delta will change as the underlying price fluctuates.
 \[
-\Gamma = \frac{\partial^2 \text{Option Price}}{\partial S^2}
+\Gamma = \frac{\partial^2 V}{\partial S^2}
 \]
 
 For \textbf{knock-in} and \textbf{knock-out} barrier options, gamma exhibits unique behavior due to the presence of the barrier. The interaction between the price of the stock, the barrier level and the time to maturity influences how gamma behaves in different scenarios.
@@ -106,7 +104,7 @@ For \textbf{knock-in} and \textbf{knock-out} barrier options, gamma exhibits uni
 	\end{table}
 \end{center}
 
-Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out put option as a function of the underlying stock price (\(S\)). As soon as the barrier is hit, the option is knocked out and gamma goes to zero. Gamma hedging is a risk management strategy used in options trading to mitigate the risks associated with large movements in the underlying asset's price. These large movements may cause large losses in delta hedged portfolio. Figure \ref{fig:compare_deltagamma_hedge} shows that hedging both delta and gamma provides minimum risk investment.
+Figure (\ref{fig:gamma_behavior}) illustrates the gamma behavior of an up-and-out put option as a function of the underlying stock price (\(S\)). As soon as the barrier is hit, the option is knocked out and gamma goes to zero. Gamma hedging is a risk management strategy used in options trading to mitigate the risks associated with large movements in the underlying asset's price. These large movements may cause large losses in delta hedged portfolio. Figure \ref{fig:compare_deltagamma_hedge} shows that hedging both delta and gamma provides minimum risk investment.
 
 \begin{figure}[h]
     \centering
@@ -139,11 +137,11 @@ Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out 
 \end{figure}
 
 
-\section{Vega ($nu$)}
+\section{Vega ($\nu$)}
 
-\textbf{Vega (\(\nu\))} measures the sensitivity of the option price to changes in volatility. For barrier options, the calculation of vega incorporates adjustments to account for the probability of breaching the barrier level under varying volatility conditions.
+Vega, $\nu$, measures the sensitivity of the option price to changes in volatility. For barrier options, the calculation of vega incorporates adjustments to account for the probability of breaching the barrier level under varying volatility conditions.
 \[
-\nu = \frac{\partial \text{Option Price}}{\partial \sigma}
+\nu = \frac{\partial V}{\partial \sigma}
 \]
 
 \begin{itemize}
@@ -158,11 +156,11 @@ Figure~\ref{fig:gamma_behavior} illustrates the gamma behavior of an up-and-out 
     \label{fig:vega_behavior}
 \end{figure}
 
-The visualization shown in Figure~\ref{fig:vega_behavior} provides insights into how Vega behaves with changes in stock price across up-and-out put option. The sensitivity patterns are influenced by the interplay between volatility and the probability of breaching the barrier level. As the barrier is breached, vega immediately goes to zero.
+The visualization shown in Figure (\ref{fig:vega_behavior}) provides insights into how Vega behaves with changes in stock price across up-and-out put option. The sensitivity patterns are influenced by the interplay between volatility and the probability of breaching the barrier level. As the barrier is breached, vega immediately goes to zero.
 
-\section{Theta ($Theta$)}
+\section{Theta ($\Theta$)}
 
-Theta (\(\Theta\)) measures the rate of change of an option's price with the passage of time, assuming all other variables remain constant. It is a critical "Greek" that reflects time decay, which is the gradual erosion of the option's value as expiration approaches. In the case of barrier options, theta is influenced not only by the time remaining but also by the interaction with the barrier level and the path dependency of the option.
+Theta, $\Theta$, measures the rate of change of an option's price with the passage of time, assuming all other variables remain constant. It is a critical "Greek" that reflects time decay, which is the gradual erosion of the option's value as expiration approaches. In the case of barrier options, theta is influenced not only by the time remaining but also by the interaction with the barrier level and the path dependency of the option.
 
 Barrier options are unique because their payoff depends on the underlying asset price crossing (or not crossing) a specified barrier level during the option's lifetime. As such, the sensitivity of theta changes depending on proximity to the barrier, time remaining until maturity, and whether the option is near the knock-in or knock-out condition.
 
@@ -181,15 +179,15 @@ Barrier options are unique because their payoff depends on the underlying asset 
 \end{figure}
 
 
-The visualization in Figure~\ref{fig:theta_behavior} illustrates the relationship between stock price and theta for an up-and-out put option. This analysis highlights how theta's sensitivity varies depending on proximity to the barrier. As the stock price approaches the strike, theta is decreasing. As the stock price approaches the barrier, it is increasing. However, when stock price hits the barrier, theta immediately goes to zero.
+The visualization in Figure (\ref{fig:theta_behavior}) illustrates the relationship between stock price and theta for an up-and-out put option. This analysis highlights how theta's sensitivity varies depending on proximity to the barrier. As the stock price approaches the strike, theta is decreasing. As the stock price approaches the barrier, it is increasing. However, when stock price hits the barrier, theta immediately goes to zero.
 
 
 \section{Rho (\(\rho\))}
 
-Rho for barrier options measures the sensitivity of the option price to changes in the risk-free interest rate (\(r\)). It represents how much the value of the option changes when the risk-free rate changes by 1\%. Rho is important in understanding the impact of monetary policy, such as changes in interest rates, on the value of barrier options.
+Rho, $\rho$, for barrier options measures the sensitivity of the option price to changes in the risk-free interest rate (\(r\)). It represents how much the value of the option changes when the risk-free rate changes by 1\%. Rho is important in understanding the impact of monetary policy, such as changes in interest rates, on the value of barrier options.
 
 \[
-\rho = \frac{\partial \text{Option Price}}{\partial r}
+\rho = \frac{\partial V}{\partial r}
 \]
 
 When interest rates rise:
