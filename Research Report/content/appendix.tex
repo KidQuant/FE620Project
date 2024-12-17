@@ -1,10 +1,7 @@
 \begin{appendices}
 \chapter{Formulas and Proofs}
-\section{Black-Scholes PDE for Barrier Options}
-\label{section:A1}
-\newpage
 \section{Payoffs Formulas for Single Barrier Options}
-\label{section:A2}
+\label{section:A1}
 The formula for Single Barrier options have been proved by Reiner and Rubinstein. The payoff of a Single Barrier call or put depends on the following formulas:
 \[
 \begin{aligned}
@@ -35,4 +32,26 @@ where $\mu$ and $\lambda$ is the following
 \[
 \mu=\frac{r-q-\tfrac{\sigma^2}{2}}{\sigma^2},\quad\lambda=\sqrt{\mu^2+\frac{2q}{\sigma^2}}
 \]
+\newpage
+\section{Code for Monte Carlo Simulated Paths}
+\label{section:A2}
+\lstinputlisting[language=python]{monte_carlo_path.py}
+\newpage
+\section{Code for Monte Carlo Pricing}
+\lstinputlisting[language=python]{monte_carlo_pricer.py}
+\newpage
+\section{Code for Delta ($\Delta$)}
+\lstinputlisting[language=python]{delta.py}
+\newpage
+\section{Code for Gamma ($\Gamma$)}
+\lstinputlisting[language=python]{gamma.py}
+\newpage
+\section{Code for Vega $(\nu)$}
+\lstinputlisting[language=python]{vega.py}
+\newpage
+\section{Code for Theta ($\Theta$)}
+\lstinputlisting[language=python]{theta.py}
+\newpage
+\section{Code for Rho ($\rho$)}
+\lstinputlisting[language=python]{rho.py}
 \end{appendices}

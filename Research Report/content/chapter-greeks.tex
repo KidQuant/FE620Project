@@ -1,12 +1,7 @@
 \chapter{The Greeks for Barrier Options}
 \label{sec:greeks}
 
-The Greeks are key sensitivities in option pricing that measure how the price of an option changes with respect to various factors such as the underlying asset price, time to maturity, volatility, and interest rates. For barrier options, the calculation of the Greeks is more complex due to the added condition of a barrier, which affects the option's price path and behavior.
-
-For the plots in this section, the parameters are \( S_0 = 40 \), \( K = 50 \), \( T = 1.0 \), \( r = 0.1 \), \( \sigma = 0.2 \), and \( B = 60 \), representing the spot stock price, strike price, time to maturity (in years), risk-free rate, volatility, and barrier level, respectively.
-
-
-
+The Greeks are key sensitivities in option pricing that measure how the price of an option changes with respect to various factors such as the underlying asset price, time to maturity, volatility, and interest rates. For barrier options, the calculation of the Greeks is more complex due to the added condition of a barrier, which affects the option's price path and behavior. For the plots in this section, we use assume $S = 40 , K = 50, T = 1.0, r = 10\%, \sigma = 20\%, \text{ and } B = 60$.
 
 \section{Delta (\(\Delta\))}
 
@@ -15,7 +10,7 @@ Delta for a barrier option measures the sensitivity of the option price to chang
 \Delta = \frac{\partial V}{\partial S}
 \]
 
-For \textbf{knock-in} barrier options, delta behaves similarly to that of a standard European option but is influenced by the presence of the barrier. It reflects how changes in the underlying price affect the probability of the barrier being breached and the option becoming active. Figure (\ref{fig:delta_upout}) shows the delta behavior of an up-and-out put option as a function of the underlying stock price, $S$. When the stock price is well below the barrier level $B$, delta behaves similarly to a vanilla European put option. As the price approaches the barrier, delta tends toward zero because the likelihood of the option being knocked out increases, reducing its sensitivity.
+For \textbf{knock-in} barrier options, the delta behaves similarly to that of a standard European option but is influenced by the presence of the barrier. It reflects how changes in the underlying price affect the probability of the barrier being breached and the option becoming active. Figure (\ref{fig:delta_upout}) shows the delta behavior of an up-and-out put option as a function of the underlying stock price, $S$. When the stock price is well below the barrier level of $B$, the delta behaves similarly to a vanilla European put option. As the price approaches the barrier, the delta tends toward zero because the likelihood of the option being knocked out increases, reducing its sensitivity.
 
 To further analyze the delta across different barrier options, refer to the table below:
 \begin{center}
@@ -39,7 +34,7 @@ To further analyze the delta across different barrier options, refer to the tabl
 	\item \textbf{Knock-In Options:} Show increasing sensitivity as the underlying price nears the barrier because the probability of activation rises.
 \end{itemize}
 
-The visual analysis in Figure (\ref{fig:delta_upout}) shows delta behavior for an up and out put option. The insights from the plot matches the intuition from Table (\ref{tab:delta_barrier_options}) which provides a comprehensive understanding of how delta behaves across different types of barrier options. Before the stock price hits the barrier, the delta is similar to one of a vanilla option. As the stock price hits the barrier, there is a steep decline in delta as the option is knocked out and the option price is zero.
+The visual analysis in Figure (\ref{fig:delta_upout}) shows delta behavior for an up-and-out put option. The insights from the plot match the intuition from Table (\ref{tab:delta_barrier_options}), which provides a comprehensive understanding of how delta behaves across different types of barrier options. Before the stock price hits the barrier, the delta is similar to one of a vanilla option. As the stock price hits the barrier, there is a steep decline in delta as the option is knocked-out and the option price is zero.
 \begin{figure}[H]
     \centering
     \includegraphics[width=.65\linewidth]{content/images/delta.png}
@@ -49,7 +44,7 @@ The visual analysis in Figure (\ref{fig:delta_upout}) shows delta behavior for a
 
 \subsection{Delta Hedging}
 
-In this section, we retrieve NVDA prices from October 21--25, 2024, using the parameters \( K = 143 \), \( T = 1 \), \( r = 0.046 \), \( \sigma = 0.5 \), and \( B = 150 \), which represent the strike price, time to maturity, risk-free rate, volatility, and barrier level, respectively. We calculated the option price and its delta. The unhedged and hedged changes are presented in Table (\ref{tab:hedging}), demonstrating the effectiveness of delta hedging in minimizing investment risks. Figure (\ref{fig:hedgingvunhedging}) provides a visual comparison of hedged versus unhedged changes from October 22 to 24, 2024; illustrating that hedging reduces risk by minimizing the volatility of the option price.
+In this section, we retrieve NVDA prices from October 21-25, 2024, using the parameters $K = 143, T = 1, r = 4.6\%, \sigma = 50\%, \text{ and } B = 150$, which represent the strike price, time to maturity, risk-free rate, volatility, and barrier level, respectively. We calculated the option price and its delta. The unhedged and hedged changes are presented in Table (\ref{tab:hedging}), demonstrating the effectiveness of delta hedging in minimizing investment risks. Figure (\ref{fig:hedgingvunhedging}) provides a visual comparison of hedged versus unhedged changes from October 22 to 24, 2024; illustrating that hedging reduces risk by minimizing the volatility of the option price.
 
 \begin{table}[h]
     \centering

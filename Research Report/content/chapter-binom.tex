@@ -1,7 +1,7 @@
 \chapter{Binomial Tree Method}
 \label{sec:binomial-tree}
 
-The \textit{binomial tree method} is a useful approach for pricing derivative instruments, including barrier options. It works by breaking down the time from the current moment (\(t = 0\)) to the option's maturity (\(T\)) into a finite number of steps (\(N\)). The more steps you use, the more accurate the price becomes, eventually converging to the theoretical option price.
+The \textit{binomial tree method} is helpful for pricing derivative instruments, including barrier options. It works by breaking down the time from the current moment (\(t = 0\)) to the option's expiration, $T$ into a finite number of steps $N$. The more steps you use, the more accurate the price becomes, eventually converging to the theoretical option price.
 
 \section{Binomial Tree Structure}
 
@@ -75,7 +75,7 @@ Consider an up-and-out put option with these parameters:
     \caption{Binomial Tree with Barrier Level \(B = 120\) and Strike Price \(K = S_0\).}
     \label{fig:binomial-tree}
 \end{figure}
-Figure (\ref{fig:binomial-tree}) illustrates the binomial tree for the given parameters, showing the possible stock price movements and the resulting option values at each node. The calculated option price, considering the up-and-out barrier condition, is obtained through backward induction along the tree. This ensures that the barrier condition is applied at each step. The final option price using this method is 6.17. For reference, the actual option price using the analytical formula is 5.36.
+Figure (\ref{fig:binomial-tree}) illustrates the binomial tree for the given parameters, showing the possible stock price movements and the resulting option values at each node. Considering the up-and-out barrier condition, the calculated option price is obtained through backward induction along the tree. This ensures that the barrier condition is applied at each step. The final option price using this method is 6.17. For reference, the actual option price using the analytical formula is 5.36.
 
 \begin{figure}[h]
     \centering
@@ -84,4 +84,4 @@ Figure (\ref{fig:binomial-tree}) illustrates the binomial tree for the given par
     \label{fig:binom-nofsteps}
 \end{figure}
 
-The binomial tree method is great for pricing various options, including barrier options, because it's intuitive and systematic. As shown in Figure (\ref{fig:binom-nofsteps}), the option price gets closer to the analytical solution as the number of steps, $N$ increases. However, this accuracy comes with higher computational complexity, especially for path-dependent options. In such cases, methods like Monte Carlo simulations or analytical approaches can be more efficient and scalable, providing accuracy without the heavy computational load. Balancing flexibility and efficiency is crucial when choosing the right pricing method for complex financial derivatives.
+The binomial tree method is excellent for pricing various options, including barrier options, because it's intuitive and systematic. As shown in Figure (\ref{fig:binom-nofsteps}), the option price gets closer to the analytical solution as the number of steps, $N$, increases. However, this accuracy comes with higher computational complexity, especially for path-dependent options. In such cases, methods like Monte Carlo simulations or analytical approaches can be more efficient and scalable, providing accuracy without the heavy computational load. Flexibility and efficiency are crucial when choosing the proper pricing method for complex financial derivatives.

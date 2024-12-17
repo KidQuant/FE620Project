@@ -1,4 +1,32 @@
 \chapter{Barrier Option Pricing with Monte Carlo}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.65\linewidth]{content/images/monte_carlo_paths.png}
+	\caption{Simulated Paths Barrier Option Prices using Monte Carlo}
+	\label{fig:monte_carlo_paths}
+\end{figure}
+Suppose the asset price follows a Geometric Brownian Motion (GBM):
+\begin{equation}\label{eq:GBM}
+	dS_t=rS_tdt+\sigma S_tdW_t
+\end{equation}
+Where $S_t$ is the asset price at time $t$, $r$ is the risk-free interest rate, $\sigma$ is the volatility of the asset, and $dW_t$ is the increment of a Wiener process. With this process in mind, we can discretize time by dividing the total time into smaller length intervals $\Delta t=T/N.$ Afterwards, we simulate the asset price paths by generating a random standard normal variable $Z$ and using the random variable to update the asset price with the discretized GBM. 
+\begin{equation}
+	S_{t+\Delta t}=S_t\times\exp\left(\left(r-\frac{\sigma^2}{2}\right)\Delta t+\sigma\sqrt{\Delta t}\times 2\right)
+\end{equation}
+
+The Monte Carlo simulation is a tool that we can implement to analyze models like GBM. Monte Carlo is a computational algorithm that uses repeated random sampling to obtain numerical results. It is used to predict the behavior of complex systems that are difficult to model analytically (while European Barrier options have an analytical solution, we will still incorporate Monte Carlo). In the context of GBM, Monte Carlo simulations are used to simulate many possible paths of stock prices over time under the assumptions of GBM. This allows for exploring statistical outcomes and quantifying risk in a financial context, where analytical solutions may be challenging to reproduce. 
+
+Figure (\ref{fig:monte_carlo_paths}) shows the simulated Monte Carlo paths for all of the barrier call options: up-and-in (top left), up-and-out (top right), down-and-in (bottom left), and down-and-out (bottom right). We assume the $S=100, K=100, T=1,r=5\%,\text{ and } \sigma=20\%$. We use a barrier, $B$, of 120 for the up-in/up-out options and 90 for the down-in/down-out options. We highlight the path's different colors based on the outcome at the expiration date. 
+
+Take the up-and-in (top-left) barrier option, for example. If the simulated stock path breaches the barrier and stays above the strike price, $K$, we highlight the path as green. If the stock breaches the barrier but ends below the strike price, we highlight the path as blue (the option becomes exercisable but expires out-of-the-money). All other paths will be highlighted in red if the simulated paths never breach the barrier level. Other simulations utilize the same criteria for their path directions based on the characteristics of the option. 
+
+We have only used 100 simulations, as it is easier to display the different outcomes. Regardless, we can see that we can consistently arrive at an option price that mirrors the analytical model simply by averaging the outcomes where $K<S<B$, as we are working with an up-and-out.
+\newpage
+\section{Monte Carlo Simulation}
+
+Table (\ref{tab:MC_barrer}) shows the comparison between the Black-Scholes analytical price and the Monte Carlo simulations for the up-and-out call options. We have chosen options with different Barrier values as well as varying stock values.
+
 \begin{center}
 	\begin{table}[H]
 		\begin{tabular}{ | m{4em} | m{1.4cm}| m{1.4cm} | m{1.4cm}| m{1.4cm} | m{1.37cm} | m{1.4cm} | m{1.4cm} | m{1.4cm} | m{1.45cm} |} 
@@ -18,22 +46,13 @@
 			$S_0=110$ $B=130$ & 2.9014 (1.6735) & 2.4881 (1.5780)  & 0.4133 (0.0955) & 3.1815 (1.8227) & -0.2801 (-0.1492) & 2.9130 (1.7561) & -0.0116 (-0.0826) & 2.9700 (1.6167) & -0.0686 (0.0568)\\
 			\hline
 			$S_0=110$ $B=250$ & 13.2660 (3.7534) & 13.4717 (4.6529)  & -0.2057 (-0.8995) & 13.0827 (4.2545) & 0.1833 (-0.5011) & 13.1939 (3.5797) & 0.0721 (0.1737) & 13.2129 (3.7706) & 0.0531 (-0.0172)\\
-		\hline
+			\hline
 		\end{tabular}
 		\caption{MC Up-and-out call with $q=0\%,r=10\%, T=1,\sigma=20\%,K=100$}
 		\label{tab:MC_barrer}
 	\end{table}
 \end{center}
-Suppose the asset price follows a Geometric Brownian Motion (GBM):
-\begin{equation}\label{eq:GBM}
-	dS_t=rS_tdt+\sigma S_tdW_t
-\end{equation}
-Where $S_t$ is the asset price at time $t$, $r$ is the risk-free interest rate, $\sigma$ is the volatility of the asset, and $dW_t$ is the increment of a Wiener process. With this process in mind, we can discretize time by dividing the total time into smaller length intervals $\Delta t=T/N.$ Afterwards, we simulate the asset price paths by generating a random standard normal variable $Z$ and using the random variable to update the asset price with the discretized GBM.
-\begin{equation}
-	S_{t+\Delta t}=S_t\times\exp\left(\left(r-\frac{\sigma^2}{2}\right)\Delta t+\sigma\sqrt{\Delta t}\times 2\right)
-\end{equation}
-Table (\ref{tab:MC_barrer}) shows the comparison between the Black-Scholes analytical price and the Monte Carlo simulations for the up-and-out call options. We have chosen options with different Barrier values as well as varying stock values.
 
-These results will be compared with those obtained through alternative variations of Monte Carlo methods. We've used simulations for $n=100,1000,5000,\text{ and }10000$ and samples. The errors listed in the tables represent the price deviation from the analytical values. The values in the parenthesis denote the outcome for puts, while the values without parenthesis denote the values for calls. As we can see, the Monte Carlo price gets closer to the analytical solution for $n=5000$. With the table, we confirm one main aspect of Monte Carlo theory: increasing the number of simulations leads to an improved accuracy for the computation. 
+These results will be compared with those obtained through alternative variations of Monte Carlo methods. We've used simulations $n=100$, the same number as in Figure (\ref{fig:monte_carlo_paths}), but we also use simulations where $n=1000,5000,\text{ and }10000$, as well. The errors listed in the tables represent the price deviation from the analytical values. The values in the parenthesis denote the outcome for puts, while the values without parenthesis denote the values for calls. As we can see, the Monte Carlo price gets closer to the analytical solution for $n=5000$. With the table, we confirm one main aspect of Monte Carlo theory: increasing the number of simulations leads to an improved accuracy for the computation. 
 
 We have also used a simulation with an arbitrarily high barrier of 250 and the results simulate what we can expect from the Monte Carlo method, as well as the analytical method. When the barrier is very far away from the underlying price, the option value will mirror the Black-Scholes price.

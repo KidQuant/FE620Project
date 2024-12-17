@@ -15,20 +15,20 @@ K = 100.0  # strike
 T = 1.0  # maturity
 r = 0.1  # risk free rate
 sigma = 0.2  # diffusion coefficient or volatility
-B = 1000  # Barrier 1
-sim=100
+B = 250  # Barrier 1
+sim=10000
 call = VanillaEuro(S0, K, T, sigma,r, 0)
 
-call.vanilla_european_call()
+call.vanilla_european_put()
 
 barrier = BarrierOption(S0, K, T, sigma, r, 0, B)
-BSM_price = barrier.up_call('out')
+BSM_price = barrier.up_put('out')
 
 
 # BSM_price = 1.6735
 print(f"Black Scholes Option Price: {BSM_price:.4f}")
 
-MC_barrier = MC_BarrierOption("call", "up_and_out", S0, K, B, T, sigma, r)
+MC_barrier = MC_BarrierOption("put", "up_and_out", S0, K, B, T, sigma, r)
 MC_price = MC_barrier.monte_carlo_pricing(sim, sim, plot=False)
 
 print(f"Monte Carlo Option Price: {MC_price:.4f}")
@@ -85,7 +85,7 @@ for i in range(Ntime - 2, -1, -1):
     offset[-1] = c * V[-1, i]
     V[1:-1, i] = DD.solve(V[1:-1, i + 1] - offset)
 
-# finds the option at S0
+# = V * (oPrice / np.max(V))
 oPrice = np.interp(X0, x, V[:, 0])
 print("The price of the Up and Out option by PDE is: ", oPrice)
 
