@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {5.3}Vega ($\nu $)}{19}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Theta ($\Theta $)}{21}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Rho (\(\rho \))}{21}{section.5.5}%
-\contentsline {chapter}{\numberline {A}Formulas and Proofs}{24}{appendix.1.A}%
+\contentsline {chapter}{\numberline {A}Formulas and Codes}{24}{appendix.1.A}%
 \contentsline {section}{\numberline {A.1}Payoffs Formulas for Single Barrier Options}{24}{section.1.A.1}%
 \contentsline {section}{\numberline {A.2}Code for Monte Carlo Simulated Paths}{25}{section.1.A.2}%
 \contentsline {section}{\numberline {A.3}Code for Monte Carlo Pricing}{27}{section.1.A.3}%

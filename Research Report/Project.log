@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  17 DEC 2024 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.13)  17 DEC 2024 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1674,7 +1674,7 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Project.out' has not changed.
-(rerunfilecheck)             Checksum: 768DCD902CDF21F3172BA728FA71D9C7;5361.
+(rerunfilecheck)             Checksum: 7815E24F529DF0B7C0F5A5C572387A27;5356.
  ) 
 Here is how much of TeX's memory you used:
  36781 strings out of 476326
@@ -1703,7 +1703,7 @@ type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/drebi/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/drebi/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/drebi/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Project.pdf (40 pages, 1324740 bytes).
+Output written on Project.pdf (40 pages, 1324735 bytes).
 PDF statistics:
  1282 PDF objects out of 1440 (max. 8388607)
  729 named destinations out of 1000 (max. 500000)
